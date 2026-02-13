@@ -2,6 +2,17 @@ import React, { useEffect } from "react";
 import { SERVICES } from "../constants";
 import { ServiceCard } from "../types";
 
+/* ===============================
+   Calendly Type Declaration
+================================ */
+declare global {
+  interface Window {
+    Calendly?: {
+      initPopupWidget: (options: { url: string }) => void;
+    };
+  }
+}
+
 interface ServiceDetailPageProps {
   serviceId: string;
 }
@@ -12,6 +23,21 @@ const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({ serviceId }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [serviceId]);
+
+  /* ===============================
+     Load Calendly Script Once
+  ================================ */
+  useEffect(() => {
+    const scriptId = "calendly-widget-script";
+
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
 
   if (!service)
     return (
@@ -26,6 +52,21 @@ const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({ serviceId }) => {
         </div>
       </div>
     );
+
+    
+
+   /* ===============================
+     Calendly Popup Handler
+  ================================ */
+  const openCalendlyPopup = () => {
+    if (window.Calendly?.initPopupWidget) {
+      window.Calendly.initPopupWidget({
+        url: "https://calendly.com/zenydata-sales/30min",
+      });
+    } else {
+      console.warn("Calendly widget not ready yet.");
+    }
+  };
 
   return (
     <div className="bg-white min-h-screen pt-32 pb-24 overflow-hidden">
@@ -235,7 +276,7 @@ const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({ serviceId }) => {
       </section>
 
       {/* Dynamic CTA */}
-      <section className="max-w-5xl mx-auto px-6 text-center">
+      <section className="max-w-auto mx-auto px-6 text-center bg-slate-50">
         <div className="py-24 border-y border-slate-100 space-y-10">
           <h3 className="text-4xl lg:text-6xl font-black text-slate-950 tracking-tight leading-tight">
             Ready to evolve your <br />
@@ -249,7 +290,9 @@ const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({ serviceId }) => {
             audit your current architecture and deliver a strategic growth plan.
           </p>
           <div className="flex justify-center gap-6 pt-6">
-            <button className="bg-slate-950 text-white px-14 py-6 rounded-2xl font-black uppercase tracking-[0.3em] text-[11px] hover:bg-[#2E1CFF] transition-all shadow-4xl active:scale-95">
+            <button 
+            onClick={openCalendlyPopup}
+            className="bg-slate-950 text-white px-14 py-6 rounded-2xl font-black uppercase tracking-[0.3em] text-[11px] hover:bg-[#2E1CFF] transition-all shadow-4xl active:scale-95">
               Consult with Domain Experts
             </button>
           </div>
