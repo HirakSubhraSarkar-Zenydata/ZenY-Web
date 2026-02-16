@@ -297,7 +297,7 @@ const Navbar: React.FC = () => {
               navigate("/partners");
               closeMenus();
             }}
-            className="bg-[#2E1CFF] text-white px-8 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 active:scale-95"
+            className="bg-[#2E1CFF] text-white px-8 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 active:scale-95 hidden lg:flex"
           >
             Partner with Us
           </button>

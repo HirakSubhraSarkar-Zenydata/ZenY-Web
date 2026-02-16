@@ -1,9 +1,15 @@
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import { motion, useAnimation  } from "framer-motion";
+import { useParams, useNavigate } from "react-router-dom";
 
 
 const AssociationsPage: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
+  useEffect(() => {
+          window.scrollTo(0, 0);
+        }, [id]);
+
   return (
     <div className="min-h-screen pt-40 pb-24 bg-white">
       <section className="max-w-7xl mx-auto px-6 mb-32">

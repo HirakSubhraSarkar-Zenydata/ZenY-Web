@@ -1,13 +1,19 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from "react-router-dom";
 
 const PartnerPage: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
+  const { id } = useParams<{ id: string }>();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
   };
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [id]);
 
   if (submitted) {
     return (
