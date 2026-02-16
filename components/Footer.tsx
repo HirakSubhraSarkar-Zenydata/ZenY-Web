@@ -1,106 +1,321 @@
+// import React from "react";
+// import Logo from "./Logo";
+// import { ViewState } from "../App";
+
+// interface FooterProps {
+//   onNavigate: (view: ViewState, id?: string) => void;
+// }
+
+// const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+//   return (
+//     <footer className="relative bg-[#020617] text-white pt-32 pb-12 overflow-hidden">
+//       {/* Aesthetic Background Elements */}
+//       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
+//       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+//       <div className="max-w-7xl mx-auto px-6 relative z-10">
+//         {/* Pre-Footer Call to Action */}
+//         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-32 border-b border-white/5 pb-20">
+//           <div className="max-w-2xl text-center lg:text-left">
+//             <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
+//               Ready to engineer your{" "}
+//               <span className="text-[#2E1CFF]">competitive edge</span>?
+//             </h2>
+//             <p className="text-slate-400 text-lg font-medium leading-relaxed">
+//               Partner with Zenydata to build high-performance, resilient data
+//               ecosystems that drive global impact.
+//             </p>
+//           </div>
+//           <div className="flex shrink-0">
+//             <button
+//               onClick={() => onNavigate("partner")}
+//               className="bg-[#2E1CFF] text-white px-12 py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-[11px] hover:bg-blue-600 hover:-translate-y-1 transition-all shadow-3xl shadow-blue-900/40 active:scale-95"
+//             >
+//               Contact Us
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Main Footer Content */}
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24">
+//           {/* Brand Identity */}
+//           <div className="lg:col-span-4 space-y-10">
+//             <button
+//               onClick={() => onNavigate("home")}
+//               className="hover:opacity-80 transition-opacity"
+//             >
+//               <Logo light={true} />
+//             </button>
+//             <p className="text-slate-400 leading-relaxed text-base font-medium max-w-sm">
+//               Architecting tomorrow's cognitive enterprises. We combine deep
+//               domain expertise with cutting-edge engineering to solve the
+//               world's most complex data challenges.
+//             </p>
+//             <div className="flex gap-4">
+//               {[
+//                 {
+//                   name: "LinkedIn",
+//                   icon: "M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z",
+//                 },
+//                 {
+//                   name: "X",
+//                   icon: "M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z",
+//                 },
+//                 {
+//                   name: "YouTube",
+//                   icon: "M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.33 29 29 0 00-.46-5.33z",
+//                 },
+//               ].map((social) => (
+//                 <a
+//                   key={social.name}
+//                   href="#"
+//                   className="w-12 h-12 rounded-2xl border border-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/5 hover:border-[#2E1CFF] transition-all duration-300"
+//                 >
+//                   <span className="sr-only">{social.name}</span>
+//                   <svg
+//                     className="w-5 h-5"
+//                     fill="currentColor"
+//                     viewBox="0 0 24 24"
+//                   >
+//                     <path d={social.icon} />
+//                   </svg>
+//                 </a>
+//               ))}
+//             </div>
+//           </div>
+
+//           {/* Practice Areas */}
+//           <div className="lg:col-span-2 space-y-8">
+//             <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-500">
+//               Solutions
+//             </h5>
+//             <ul className="space-y-4">
+//               {[
+//                 { label: "Data Engineering", id: "data-product" },
+//                 { label: "AI & ML Ops", id: "ai-ml-ops" },
+//                 { label: "Cloud Strategy", id: "cloud-data-platform" },
+//                 { label: "Digital Integration", id: "digital-integration" },
+//                 { label: "App Development", id: "software-development" },
+//               ].map((item) => (
+//                 <li key={item.id}>
+//                   <button
+//                     onClick={() => onNavigate("service-detail", item.id)}
+//                     className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
+//                   >
+//                     {item.label}
+//                   </button>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+
+//           {/* Insights & Lab */}
+//           <div className="lg:col-span-3 space-y-8">
+//             <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-500">
+//               Intelligence
+//             </h5>
+//             <ul className="space-y-4">
+//               <li>
+//                 <button
+//                   onClick={() => onNavigate("insights-hub")}
+//                   className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
+//                 >
+//                   Insights & Whitepapers
+//                 </button>
+//               </li>
+//               <li>
+//                 <button
+//                   onClick={() => onNavigate("data-lab")}
+//                   className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
+//                 >
+//                   The Data Lab (R&D)
+//                 </button>
+//               </li>
+//               <li>
+//                 <button
+//                   onClick={() => onNavigate("associations")}
+//                   className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
+//                 >
+//                   Global Associations
+//                 </button>
+//               </li>
+//               <li>
+//                 <button
+//                   onClick={() => onNavigate("partner")}
+//                   className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
+//                 >
+//                   Partner Program
+//                 </button>
+//               </li>
+//             </ul>
+//           </div>
+
+//           {/* Company */}
+          // <div className="lg:col-span-3 space-y-8">
+          //   <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-500">
+          //     Global Hub
+          //   </h5>
+          //   <div className="space-y-6">
+          //     <ul className="space-y-4">
+          //       <li>
+          //         <button
+          //           onClick={() => onNavigate("about")}
+          //           className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
+          //         >
+          //           About Zenydata
+          //         </button>
+          //       </li>
+          //       <li>
+          //         <button className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] transition-all">
+          //           Leadership
+          //         </button>
+          //       </li>
+          //       <li>
+          //         <button className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] transition-all">
+          //           Careers
+          //         </button>
+          //       </li>
+          //     </ul>
+          //     <div className="pt-6 border-t border-white/5 space-y-2">
+          //       <div className="text-[9px] font-black uppercase tracking-widest text-slate-500">
+          //         Global Headquarters
+          //       </div>
+          //       <p className="text-slate-300 text-sm font-medium">
+          //         Unit 706, 7th Floor OM Tower, 32 Chowringhee Road, Park St,
+          //         <br />
+          //         Kolkata, 700071
+          //       </p>
+          //     </div>
+          //   </div>
+          // </div>
+//         </div>
+
+//         {/* Bottom Legal Bar */}
+//         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+//           <div className="flex flex-col items-center md:items-start gap-2">
+//             <p className="text-slate-500 text-[10px] font-black tracking-[0.2em] uppercase">
+//               © 2025 ZENYDATA TECHNOLOGIES PVT. LTD. ALL RIGHTS RESERVED.
+//             </p>
+//             <p className="text-slate-600 text-[9px] font-bold uppercase tracking-widest">
+//               Empowering the world's leading organizations with cognitive
+//               resilience.
+//             </p>
+//           </div>
+//           <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] font-black uppercase tracking-widest text-slate-500">
+//             <a href="#" className="hover:text-blue-500 transition-colors">
+//               Privacy Policy
+//             </a>
+//             <a href="#" className="hover:text-blue-500 transition-colors">
+//               Terms of Service
+//             </a>
+//             <a href="#" className="hover:text-blue-500 transition-colors">
+//               Cookie Strategy
+//             </a>
+//             <a href="#" className="hover:text-blue-500 transition-colors">
+//               Ethics & AI
+//             </a>
+//           </div>
+//         </div>
+//       </div>
+//     </footer>
+//   );
+// };
+
+// export default Footer;
+
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Logo from "./Logo";
-import { ViewState } from "../App";
 
-interface FooterProps {
-  onNavigate: (view: ViewState, id?: string) => void;
-}
+const Footer: React.FC = () => {
+  const navigate = useNavigate();
 
-const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
-    <footer className="relative bg-[#020617] text-white pt-32 pb-12 overflow-hidden">
-      {/* Aesthetic Background Elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/30 to-transparent"></div>
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <footer className="relative bg-[#020617] text-white pt-24 md:pt-32 pb-12 overflow-hidden">
+      {/* ================= LOCAL FOOTER STYLES ================= */}
+      <style>{`
+        .footer-link {
+          color: rgb(148 163 184); /* slate-400 */
+          font-weight: 700;
+          transition: all 0.3s cubic-bezier(.16,1,.3,1);
+        }
+
+        .footer-link:hover {
+          color: #2E1CFF;
+          transform: translateX(4px);
+        }
+      `}</style>
+
+      {/* Decorative background */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[720px] h-[260px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Pre-Footer Call to Action */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-32 border-b border-white/5 pb-20">
+        {/* ================= PRE FOOTER CTA ================= */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-24 border-b border-white/5 pb-16">
           <div className="max-w-2xl text-center lg:text-left">
-            <h2 className="text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
               Ready to engineer your{" "}
               <span className="text-[#2E1CFF]">competitive edge</span>?
             </h2>
-            <p className="text-slate-400 text-lg font-medium leading-relaxed">
-              Partner with Zenydata to build high-performance, resilient data
-              ecosystems that drive global impact.
+            <p className="text-slate-400 text-base md:text-lg font-medium leading-relaxed">
+              Partner with Zenydata to build resilient, high-performance data
+              ecosystems that scale globally.
             </p>
           </div>
-          <div className="flex shrink-0">
-            <button
-              onClick={() => onNavigate("partner")}
-              className="bg-[#2E1CFF] text-white px-12 py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-[11px] hover:bg-blue-600 hover:-translate-y-1 transition-all shadow-3xl shadow-blue-900/40 active:scale-95"
-            >
-              Contact Us
-            </button>
-          </div>
+
+          <button
+            onClick={() => navigate("/partners")}
+            className="bg-[#2E1CFF] text-white px-12 py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-[11px] hover:bg-blue-600 hover:-translate-y-1 transition-all shadow-3xl shadow-blue-900/40 active:scale-95"
+          >
+            Contact Us
+          </button>
         </div>
 
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 mb-24">
-          {/* Brand Identity */}
-          <div className="lg:col-span-4 space-y-10">
-            <button
-              onClick={() => onNavigate("home")}
-              className="hover:opacity-80 transition-opacity"
-            >
-              <Logo light={true} />
+        {/* ================= MAIN GRID ================= */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-14 mb-24">
+          {/* Brand */}
+          <div className="lg:col-span-4 space-y-8">
+            <button onClick={() => navigate("/")} className="hover:opacity-80">
+              <Logo light />
             </button>
-            <p className="text-slate-400 leading-relaxed text-base font-medium max-w-sm">
-              Architecting tomorrow's cognitive enterprises. We combine deep
-              domain expertise with cutting-edge engineering to solve the
-              world's most complex data challenges.
+
+            <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-sm font-medium">
+              Architecting tomorrow’s cognitive enterprises through
+              data-centric engineering and intelligent systems.
             </p>
+
             <div className="flex gap-4">
-              {[
-                {
-                  name: "LinkedIn",
-                  icon: "M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z",
-                },
-                {
-                  name: "X",
-                  icon: "M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z",
-                },
-                {
-                  name: "YouTube",
-                  icon: "M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.33 29 29 0 00-.46-5.33z",
-                },
-              ].map((social) => (
-                <a
-                  key={social.name}
-                  href="#"
-                  className="w-12 h-12 rounded-2xl border border-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/5 hover:border-[#2E1CFF] transition-all duration-300"
+              {["LinkedIn", "X", "YouTube"].map((s) => (
+                <div
+                  key={s}
+                  className="w-11 h-11 rounded-xl border border-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:border-[#2E1CFF] hover:bg-white/5 transition"
                 >
-                  <span className="sr-only">{social.name}</span>
-                  <svg
-                    className="w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d={social.icon} />
-                  </svg>
-                </a>
+                  <span className="text-[11px] font-black tracking-widest">
+                    {s[0]}
+                  </span>
+                </div>
               ))}
             </div>
           </div>
 
-          {/* Practice Areas */}
-          <div className="lg:col-span-2 space-y-8">
+          {/* Solutions */}
+          <div className="lg:col-span-2 space-y-6">
             <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-500">
               Solutions
             </h5>
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               {[
-                { label: "Data Engineering", id: "data-product" },
-                { label: "AI & ML Ops", id: "ai-ml-ops" },
-                { label: "Cloud Strategy", id: "cloud-data-platform" },
-                { label: "Digital Integration", id: "digital-integration" },
-                { label: "App Development", id: "software-development" },
+                { label: "Data Engineering", path: "/services/data-product" },
+                { label: "AI & ML Ops", path: "/services/ai-ml-ops" },
+                { label: "Cloud Strategy", path: "/services/cloud-data-platform" },
+                { label: "Digital Integration", path: "/services/digital-integration" },
+                { label: "Software Development", path: "/services/software-development" },
               ].map((item) => (
-                <li key={item.id}>
+                <li key={item.label}>
                   <button
-                    onClick={() => onNavigate("service-detail", item.id)}
-                    className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
+                    onClick={() => navigate(item.path)}
+                    className="footer-link text-sm"
                   >
                     {item.label}
                   </button>
@@ -109,44 +324,27 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </ul>
           </div>
 
-          {/* Insights & Lab */}
-          <div className="lg:col-span-3 space-y-8">
+          {/* Intelligence */}
+          <div className="lg:col-span-3 space-y-6">
             <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-500">
               Intelligence
             </h5>
-            <ul className="space-y-4">
-              <li>
-                <button
-                  onClick={() => onNavigate("insights-hub")}
-                  className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
-                >
-                  Insights & Whitepapers
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate("data-lab")}
-                  className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
-                >
-                  The Data Lab (R&D)
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate("associations")}
-                  className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
-                >
-                  Global Associations
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigate("partner")}
-                  className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
-                >
-                  Partner Program
-                </button>
-              </li>
+            <ul className="space-y-3">
+              {[
+                { label: "Insights & Whitepapers", path: "/insights" },
+                { label: "The Data Lab", path: "/data-lab" },
+                { label: "Global Associations", path: "/associations" },
+                { label: "Partner Program", path: "/partners" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <button
+                    onClick={() => navigate(item.path)}
+                    className="footer-link text-sm"
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -155,65 +353,55 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-500">
               Global Hub
             </h5>
-            <div className="space-y-6">
-              <ul className="space-y-4">
-                <li>
-                  <button
-                    onClick={() => onNavigate("about")}
-                    className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
-                  >
-                    About Zenydata
-                  </button>
-                </li>
-                <li>
-                  <button className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] transition-all">
-                    Leadership
-                  </button>
-                </li>
-                <li>
-                  <button className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] transition-all">
-                    Careers
-                  </button>
-                </li>
-              </ul>
-              <div className="pt-6 border-t border-white/5 space-y-2">
-                <div className="text-[9px] font-black uppercase tracking-widest text-slate-500">
-                  Global Headquarters
-                </div>
-                <p className="text-slate-300 text-sm font-medium">
-                  Unit 706, 7th Floor OM Tower, 32 Chowringhee Road, Park St,
-                  <br />
-                  Kolkata, 700071
-                </p>
+
+            <ul className="space-y-4">
+              <li>
+                <button
+                  onClick={() => navigate("/about")}
+                  className="footer-link text-sm"
+                >
+                  About Zenydata
+                </button>
+              </li>
+              <li>
+                <button className="footer-link text-sm">Leadership</button>
+              </li>
+              <li>
+                <button className="footer-link text-sm">Careers</button>
+              </li>
+            </ul>
+
+            <div className="pt-6 border-t border-white/5 space-y-2">
+              <div className="text-[9px] font-black uppercase tracking-widest text-slate-500">
+                Global Headquarters
               </div>
+              <p className="text-slate-300 text-sm font-medium">
+                Unit 706, 7th Floor OM Tower, 32 Chowringhee Road, Park St,
+                <br />
+                Kolkata, 700071
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Bottom Legal Bar */}
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <p className="text-slate-500 text-[10px] font-black tracking-[0.2em] uppercase">
-              © 2025 ZENYDATA TECHNOLOGIES PVT. LTD. ALL RIGHTS RESERVED.
-            </p>
-            <p className="text-slate-600 text-[9px] font-bold uppercase tracking-widest">
-              Empowering the world's leading organizations with cognitive
-              resilience.
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] font-black uppercase tracking-widest text-slate-500">
-            <a href="#" className="hover:text-blue-500 transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-blue-500 transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" className="hover:text-blue-500 transition-colors">
-              Cookie Strategy
-            </a>
-            <a href="#" className="hover:text-blue-500 transition-colors">
-              Ethics & AI
-            </a>
+        {/* ================= BOTTOM BAR ================= */}
+        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-slate-500 text-[10px] font-black tracking-widest uppercase">
+            © 2025 Zenydata Technologies Pvt. Ltd.
+          </p>
+
+          <div className="flex gap-8 text-[10px] font-black uppercase tracking-widest">
+            {["Privacy", "Terms", "Cookies", "Ethics & AI"].map((item) => (
+              <button
+                key={item}
+                onClick={() =>
+                  navigate(`/${item.toLowerCase().replace(/ /g, "-")}`)
+                }
+                className="footer-link text-[10px] uppercase tracking-widest"
+              >
+                {item}
+              </button>
+            ))}
           </div>
         </div>
       </div>
@@ -222,3 +410,4 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 };
 
 export default Footer;
+

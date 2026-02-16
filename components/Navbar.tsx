@@ -157,6 +157,7 @@ const Navbar: React.FC = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [showServices, setShowServices] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -164,20 +165,23 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleServiceClick = (
-    e: React.MouseEvent,
-    id: string
-  ) => {
+  const handleServiceClick = (e: React.MouseEvent, id: string) => {
     e.stopPropagation();
     navigate(`/services/${id}`);
     setShowServices(false);
+    setIsMobileMenuOpen(false);
+  };
+
+  const closeMenus = () => {
+    setShowServices(false);
+    setIsMobileMenuOpen(false);
   };
 
   return (
     <nav
       onMouseLeave={() => setShowServices(false)}
       className={`fixed w-full z-50 transition-all duration-500 ${
-        isScrolled || showServices
+        isScrolled || showServices || isMobileMenuOpen
           ? "bg-white py-3 shadow-xl"
           : "bg-white py-5"
       }`}
@@ -185,13 +189,16 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* LOGO → HOME */}
         <button
-          onClick={() => navigate("/")}
+          onClick={() => {
+            navigate("/");
+            closeMenus();
+          }}
           className="hover:opacity-80 transition-opacity"
         >
           <Logo light={false} />
         </button>
 
-        {/* DESKTOP NAV */}
+        {/* DESKTOP NAV - completely unchanged */}
         <div className="hidden lg:flex items-center gap-2">
           {/* SERVICES DROPDOWN */}
           <div
@@ -199,7 +206,10 @@ const Navbar: React.FC = () => {
             onMouseEnter={() => setShowServices(true)}
           >
             <button
-              onClick={() => navigate("/services")}
+              onClick={() => {
+                navigate("/services");
+                closeMenus();
+              }}
               className={`text-[11px] font-bold uppercase tracking-[0.2em] transition-colors flex items-center gap-1.5 ${
                 showServices
                   ? "text-[#2E1CFF]"
@@ -227,31 +237,43 @@ const Navbar: React.FC = () => {
           </div>
 
           <button
-            onClick={() => navigate("/associations")}
+            onClick={() => {
+              navigate("/associations");
+              closeMenus();
+            }}
             className="px-4 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-600 hover:text-slate-900 transition-colors"
           >
             Associations
           </button>
 
           <button
-            onClick={() => navigate("/data-lab")}
+            onClick={() => {
+              navigate("/data-lab");
+              closeMenus();
+            }}
             className="px-4 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-600 hover:text-slate-900 transition-colors"
           >
             Data Lab
           </button>
 
           <button
-            onClick={() => navigate("/about")}
+            onClick={() => {
+              navigate("/about");
+              closeMenus();
+            }}
             className="px-4 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-600 hover:text-slate-900 transition-colors"
           >
             About Us
           </button>
         </div>
 
-        {/* RIGHT ACTIONS */}
+        {/* RIGHT ACTIONS - added hamburger only for < lg */}
         <div className="flex items-center gap-6">
           <button
-            onClick={() => navigate("/insights")}
+            onClick={() => {
+              navigate("/insights");
+              closeMenus();
+            }}
             className="hidden md:block text-slate-400 hover:text-slate-900 transition-colors"
           >
             <svg
@@ -271,15 +293,44 @@ const Navbar: React.FC = () => {
           </button>
 
           <button
-            onClick={() => navigate("/partners")}
+            onClick={() => {
+              navigate("/partners");
+              closeMenus();
+            }}
             className="bg-[#2E1CFF] text-white px-8 py-2.5 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 active:scale-95"
           >
             Partner with Us
           </button>
+
+          {/* Mobile Hamburger - only visible below lg */}
+          <button
+            className="lg:hidden text-slate-700 focus:outline-none"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            <svg
+              className="h-7 w-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2.5}
+                d={
+                  isMobileMenuOpen
+                    ? "M6 18L18 6M6 6l12 12"
+                    : "M4 6h16M4 12h16M4 18h16"
+                }
+              />
+            </svg>
+          </button>
         </div>
       </div>
 
-      {/* SERVICES MEGA MENU */}
+      {/* SERVICES MEGA MENU - unchanged */}
       <div
         className={`absolute top-full left-0 w-full bg-white border-t border-slate-100 transition-all duration-500 overflow-hidden shadow-2xl ${
           showServices
@@ -339,9 +390,121 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* ──────────────────────────────────────────────── */}
+      {/*               MOBILE MENU (only addition)         */}
+      {/* ──────────────────────────────────────────────── */}
+      <div
+        className={`lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 z-40 ${
+          isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsMobileMenuOpen(false)}
+      >
+        <div
+          className={`absolute top-0 right-0 h-full w-[85%] max-w-xs bg-white shadow-2xl transform transition-transform duration-300 ease-in-out ${
+            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex flex-col h-full">
+            {/* Header */}
+            <div className="p-5 border-b flex justify-between items-center">
+              <Logo light={false} />
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2 text-slate-600 hover:text-slate-900"
+              >
+                <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Menu items */}
+            <div className="flex-1 overflow-y-auto px-5 py-6 space-y-5">
+              <button
+                onClick={() => {
+                  navigate("/services");
+                  closeMenus();
+                }}
+                className="block w-full text-left text-base font-semibold text-slate-800 hover:text-[#2E1CFF]"
+              >
+                Services
+              </button>
+
+              <div className="pl-5 space-y-4 border-l border-slate-200">
+                {SERVICES.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={(e) => handleServiceClick(e, item.id)}
+                    className="flex items-center gap-3 text-slate-700 hover:text-[#2E1CFF] w-full text-left"
+                  >
+                    <div className="w-9 h-9 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
+                      <img src={item.icon} alt="" className="w-5 h-5" />
+                    </div>
+                    <span className="text-sm font-medium">{item.title}</span>
+                  </button>
+                ))}
+              </div>
+
+              <button
+                onClick={() => {
+                  navigate("/associations");
+                  closeMenus();
+                }}
+                className="block w-full text-left text-base font-semibold text-slate-800 hover:text-[#2E1CFF]"
+              >
+                Associations
+              </button>
+
+              <button
+                onClick={() => {
+                  navigate("/data-lab");
+                  closeMenus();
+                }}
+                className="block w-full text-left text-base font-semibold text-slate-800 hover:text-[#2E1CFF]"
+              >
+                Data Lab
+              </button>
+
+              <button
+                onClick={() => {
+                  navigate("/about");
+                  closeMenus();
+                }}
+                className="block w-full text-left text-base font-semibold text-slate-800 hover:text-[#2E1CFF]"
+              >
+                About Us
+              </button>
+
+              <button
+                onClick={() => {
+                  navigate("/insights");
+                  closeMenus();
+                }}
+                className="block w-full text-left text-base font-semibold text-slate-800 hover:text-[#2E1CFF] md:hidden"
+              >
+                Insights
+              </button>
+            </div>
+
+            {/* Bottom CTA */}
+            <div className="p-5 border-t">
+              <button
+                onClick={() => {
+                  navigate("/partners");
+                  closeMenus();
+                }}
+                className="w-full bg-[#2E1CFF] text-white py-3.5 rounded-lg font-bold uppercase tracking-wide text-sm hover:bg-blue-700 transition-colors shadow-md"
+              >
+                Partner with Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 };
 
 export default Navbar;
-
