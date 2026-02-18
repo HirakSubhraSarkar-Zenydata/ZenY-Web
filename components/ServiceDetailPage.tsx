@@ -638,6 +638,36 @@ const ServiceDetailPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+
+      {/* <section className="max-w-auto mx-auto px-4 sm:px-6 text-center bg-slate-50">
+  <div className="py-16 sm:py-20 lg:py-24 border-y border-slate-100 space-y-8 sm:space-y-10">
+    
+    <h3 className="text-3xl sm:text-4xl lg:text-6xl font-black text-slate-950 tracking-tight leading-snug sm:leading-tight">
+      Ready to evolve your <br className="hidden sm:block" />
+      <span className="text-[#2E1CFF]">
+        {service.title.toLowerCase()}
+      </span>{" "}
+      ecosystems?
+    </h3>
+
+    <p className="text-base sm:text-lg lg:text-xl text-slate-500 font-medium max-w-xl sm:max-w-2xl mx-auto leading-relaxed">
+      Our specialized {service.title.toLowerCase()} experts are ready to
+      audit your current architecture and deliver a strategic growth plan.
+    </p>
+
+    <div className="flex justify-center pt-4 sm:pt-6">
+      <button
+        onClick={openCalendlyPopup}
+        className="w-full sm:w-auto bg-slate-950 text-white px-10 sm:px-14 py-5 sm:py-6 rounded-2xl font-black uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[10px] sm:text-[11px] hover:bg-[#2E1CFF] transition-all shadow-4xl active:scale-95"
+      >
+        Consult with Domain Experts
+      </button>
+    </div>
+
+  </div>
+</section> */}
+
     </div>
   );
 };

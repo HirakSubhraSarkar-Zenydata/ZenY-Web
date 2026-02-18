@@ -1,21 +1,54 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
+import emailjs from '@emailjs/browser';
 
 const PartnerPage: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+  full_name: "",
+  email: "",
+  company: "",
+  interest: "",
+  message: ""
+});
+
   const { id } = useParams<{ id: string }>();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+ const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  emailjs
+    .send(
+      "service_9jrvytd",
+      "template_ut6fxvj",
+      {
+        full_name: formData.full_name,
+        email: formData.email,
+        company: formData.company,
+        interest: formData.interest,
+        message: formData.message
+      },
+      "K_H0cnXJ68Ik6vKEQ"
+    )
+    .then(() => {
+      setSubmitted(true);
+    })
+    .catch((error) => {
+      console.error("EmailJS error:", error);
+      alert("Something went wrong. Please try again.");
+    });
+};
+
 
     useEffect(() => {
       window.scrollTo(0, 0);
     }, [id]);
 
   if (submitted) {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [id]);
     return (
       <div className="min-h-screen pt-40 pb-24 flex items-center justify-center bg-white px-6">
         <div className="max-w-xl text-center space-y-8 animate-in fade-in">
@@ -68,32 +101,49 @@ const PartnerPage: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-3">
                 <label className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Full Name</label>
-                <input required type="text" className="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none transition-all" placeholder="Enter name" />
-              </div>
+                <input required type="text" value={formData.full_name}
+                  onChange={(e) =>
+                  setFormData({ ...formData, full_name: e.target.value })
+                  } className="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none transition-all" placeholder="Enter name" />
+                </div>
               <div className="space-y-3">
                 <label className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Corporate Email</label>
-                <input required type="email" className="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none transition-all" placeholder="email@company.com" />
+                <input required type="email"  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  } className="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none transition-all" placeholder="email@company.com" />
               </div>
             </div>
 
             <div className="space-y-3">
               <label className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Company / Organization</label>
-              <input required type="text" className="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none transition-all" placeholder="Legal entity name" />
+              <input required type="text" value={formData.company}
+                onChange={(e) =>
+                  setFormData({ ...formData, company: e.target.value })
+                } className="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none transition-all" placeholder="Legal entity name" />
             </div>
 
             <div className="space-y-3">
               <label className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Primary Interest</label>
-              <select className="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none transition-all">
-                <option>Strategic Technology Partnership</option>
-                <option>Channel Distribution</option>
-                <option>Academic Research Collaboration</option>
-                <option>Managed Service Alignment</option>
+              <select value={formData.interest}
+                onChange={(e) =>
+                  setFormData({ ...formData, interest: e.target.value })
+                } className="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none transition-all">
+                <option value="">Select service interest</option>
+                <option value="Data Engineering & Platforms">Data Engineering & Platforms</option>
+                <option value="AI & MLOps">AI & MLOps</option>
+                <option value="AI & Data Platform Strategy">AI & Data Platform Strategy</option>
+                <option value="Digital & System Integration">Digital & System Integration</option>
+                <option value="Other / Not Listed">Other / Not Listed</option>
               </select>
             </div>
 
             <div className="space-y-3">
               <label className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Alignment Briefing</label>
-              <textarea rows={4} className="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none transition-all" placeholder="Outline your vision for partnership..." />
+              <textarea rows={4} value={formData.message}
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                } className="w-full bg-white border border-slate-200 rounded-xl px-5 py-4 focus:ring-2 focus:ring-blue-600 outline-none transition-all" placeholder="Outline your vision for partnership..." />
             </div>
 
             <button type="submit" className="w-full bg-[#2E1CFF] text-white font-black uppercase tracking-[0.3em] text-[11px] py-6 rounded-2xl shadow-xl shadow-blue-600/30 hover:bg-blue-700 transition-all active:scale-95">

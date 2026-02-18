@@ -761,13 +761,38 @@ const ServicesPage: React.FC = () => {
                 scalability and absolute data security.
               </p>
 
-              <Magnetic
+              {/* <Magnetic
                 onClick={() => navigate(`/services/${service.id}`)}
               >
                 <div className="px-12 py-4 bg-[#2E1CFF] text-white rounded-xl text-[11px] font-bold uppercase tracking-[0.25em] shadow-xl shadow-blue-600/30">
                   View Practice Area
                 </div>
-              </Magnetic>
+              </Magnetic> */}
+
+              <button
+  onClick={() => navigate(`/services/${service.id}`)}
+  className="
+    bg-[#2E1CFF]
+    text-white
+    px-12
+    py-4
+    rounded-2xl
+    font-black
+    uppercase
+    tracking-[0.25em]
+    text-[11px]
+    transition-all
+    duration-300 ease-out
+    hover:bg-blue-600
+    hover:-translate-y-1
+    active:scale-95
+    shadow-3xl
+    shadow-blue-900/40
+  "
+>
+  Read More
+</button>
+
             </motion.div>
 
             {/* IMAGE */}
