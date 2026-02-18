@@ -615,24 +615,28 @@ const ServiceDetailPage: React.FC = () => {
         </div>
       </section>
 
-      {/* ===============================
-         CTA
-      ================================ */}
-      <section className="bg-slate-50 text-center py-24">
-        <h3 className="text-4xl lg:text-6xl font-black text-slate-950 mb-8">
-          Ready to evolve your{" "}
-          <span className="text-[#2E1CFF]">
-            {service.title.toLowerCase()}
-          </span>{" "}
-          ecosystem?
-        </h3>
-
-        <button
-          onClick={openCalendlyPopup}
-          className="bg-slate-950 text-white px-14 py-6 rounded-2xl font-black uppercase tracking-[0.3em] text-[11px] hover:bg-[#2E1CFF] transition-all"
-        >
-          Consult with Domain Experts
-        </button>
+      {/* Dynamic CTA */}
+      <section className="max-w-auto mx-auto px-6 text-center bg-slate-50">
+        <div className="py-24 border-y border-slate-100 space-y-10">
+          <h3 className="text-4xl lg:text-6xl font-black text-slate-950 tracking-tight leading-tight">
+            Ready to evolve your <br />
+            <span className="text-[#2E1CFF]">
+              {service.title.toLowerCase()}
+            </span>{" "}
+            ecosystems?
+          </h3>
+          <p className="text-xl text-slate-500 font-medium max-w-2xl mx-auto">
+            Our specialized {service.title.toLowerCase()} experts are ready to
+            audit your current architecture and deliver a strategic growth plan.
+          </p>
+          <div className="flex justify-center gap-6 pt-6">
+            <button 
+            onClick={openCalendlyPopup}
+            className="bg-slate-950 text-white px-14 py-6 rounded-2xl font-black uppercase tracking-[0.3em] text-[11px] hover:bg-[#2E1CFF] transition-all shadow-4xl active:scale-95">
+              Consult with Domain Experts
+            </button>
+          </div>
+        </div>
       </section>
     </div>
   );
