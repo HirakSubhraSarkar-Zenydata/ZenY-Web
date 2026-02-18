@@ -499,7 +499,7 @@ const Hero: React.FC = () => {
     <section
       className="
         relative bg-[#020617] overflow-hidden pt-16
-        h-[64vh] min-h-[460px]
+        h-[64vh] min-h-[500px]
         sm:h-[72vh]
         lg:h-[76vh]
         xl:h-[78vh]
@@ -603,10 +603,10 @@ const Hero: React.FC = () => {
               text-[24px]
               sm:text-[32px]
               lg:text-[40px]
-              xl:text-[44px]
-              leading-[1.18]
+              xl:text-[60px]
+              leading-[1.1]
               max-w-[24ch]
-              mb-5
+              mb-6
             "
           >
             {dataFocusContent[activeIndex].title}
