@@ -159,19 +159,19 @@
 //               onSelect={(id) => navigateTo("insight-detail", id)}
 //             />
 
-//             <section className="py-24 bg-[#2E1CFF] text-white relative overflow-hidden">
-//               <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
-//                 <blockquote className="text-3xl lg:text-4xl font-extrabold leading-tight mb-8 italic">
-//                   "Zenydata redefined our entire data lifecycle. What took 4
-//                   days of manual auditing now takes 8 milliseconds of automated
-//                   validation."
-//                 </blockquote>
-//                 <p className="text-blue-200 font-bold uppercase tracking-[0.4em] text-[10px]">
-//                   Director of Engineering, Fortune 50 Financial Services
-//                 </p>
-//               </div>
-//               <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-[120px]"></div>
-//             </section>
+            // <section className="py-24 bg-[#2E1CFF] text-white relative overflow-hidden">
+            //   <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
+            //     <blockquote className="text-3xl lg:text-4xl font-extrabold leading-tight mb-8 italic">
+            //       "Zenydata redefined our entire data lifecycle. What took 4
+            //       days of manual auditing now takes 8 milliseconds of automated
+            //       validation."
+            //     </blockquote>
+            //     <p className="text-blue-200 font-bold uppercase tracking-[0.4em] text-[10px]">
+            //       Director of Engineering, Fortune 50 Financial Services
+            //     </p>
+            //   </div>
+            //   <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-[120px]"></div>
+            // </section>
 //           </>
 //         );
 //       case "services-hub":
@@ -373,6 +373,19 @@ const HomePage = () => (
     <Services />
     <Industries />
     <Insights />
+     <section className="py-24 bg-[#2E1CFF] text-white relative overflow-hidden">
+              <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
+                <blockquote className="text-3xl lg:text-4xl font-extrabold leading-tight mb-8 italic">
+                  "Zenydata redefined our entire data lifecycle. What took 4
+                  days of manual auditing now takes 8 milliseconds of automated
+                  validation."
+                </blockquote>
+                <p className="text-blue-200 font-bold uppercase tracking-[0.4em] text-[10px]">
+                  Director of Engineering, Fortune 50 Financial Services
+                </p>
+              </div>
+              <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-[120px]"></div>
+            </section>
 
     {/* TESTIMONIAL */}
     {/* unchanged */}
