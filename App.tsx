@@ -85,64 +85,64 @@
 //             <DataTicker />
 //             <Stats />
 
-//             <section id="about-us" className="py-24 bg-white overflow-hidden">
-//               <div className="max-w-7xl mx-auto px-6">
-//                 <div className="grid lg:grid-cols-2 gap-20 items-center">
-//                   <div className="relative">
-//                     <h2 className="text-[#2E1CFF] font-bold uppercase tracking-[0.4em] text-[10px] mb-6">
-//                       Our Data Thesis
-//                     </h2>
-//                     <h3 className="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-[1.1] mb-8">
-//                       Where Petabytes Meet{" "}
-//                       <span className="text-[#2E1CFF]">Strategic Clarity</span>
-//                     </h3>
-//                     <p className="text-lg text-slate-500 leading-relaxed mb-10 font-medium">
-//                       Data isn't just an asset; it's the nervous system of the
-//                       modern enterprise. Zenydata Technologies engineers the
-//                       high-performance pipelines that turn raw chaos into
-//                       boardroom decisions.
-//                     </p>
-//                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-//                       {[
-//                         "Distributed Ledger Compliance",
-//                         "Real-time Behavioral Mapping",
-//                         "Predictive Failure Analysis",
-//                         "Quantum-Ready Encryption",
-//                       ].map((feat, i) => (
-//                         <div
-//                           key={i}
-//                           className="flex items-center gap-4 group cursor-default"
-//                         >
-//                           <div className="w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center text-[#2E1CFF] text-[10px] font-bold group-hover:bg-[#2E1CFF] group-hover:text-white transition-colors border border-blue-100">
-//                             ✓
-//                           </div>
-//                           <span className="text-slate-700 font-bold text-xs uppercase tracking-widest">
-//                             {feat}
-//                           </span>
-//                         </div>
-//                       ))}
-//                     </div>
-//                   </div>
-//                   <div className="relative">
-//                     <div className="aspect-square bg-slate-100 rounded-[3rem] overflow-hidden shadow-3xl border border-slate-100 group">
-//                       <img
-//                         src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
-//                         alt="Data analysis visualization"
-//                         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
-//                       />
-//                     </div>
-//                     <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-2xl shadow-2xl border border-slate-100 hidden xl:block">
-//                       <div className="text-3xl font-black text-[#2E1CFF] mb-1">
-//                         94%
-//                       </div>
-//                       <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
-//                         Efficiency Increase
-//                       </div>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//             </section>
+            // <section id="about-us" className="py-24 bg-white overflow-hidden">
+            //   <div className="max-w-7xl mx-auto px-6">
+            //     <div className="grid lg:grid-cols-2 gap-20 items-center">
+            //       <div className="relative">
+            //         <h2 className="text-[#2E1CFF] font-bold uppercase tracking-[0.4em] text-[10px] mb-6">
+            //           Our Data Thesis
+            //         </h2>
+            //         <h3 className="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-[1.1] mb-8">
+            //           Where Petabytes Meet{" "}
+            //           <span className="text-[#2E1CFF]">Strategic Clarity</span>
+            //         </h3>
+            //         <p className="text-lg text-slate-500 leading-relaxed mb-10 font-medium">
+            //           Data isn't just an asset; it's the nervous system of the
+            //           modern enterprise. Zenydata Technologies engineers the
+            //           high-performance pipelines that turn raw chaos into
+            //           boardroom decisions.
+            //         </p>
+            //         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            //           {[
+            //             "Distributed Ledger Compliance",
+            //             "Real-time Behavioral Mapping",
+            //             "Predictive Failure Analysis",
+            //             "Quantum-Ready Encryption",
+            //           ].map((feat, i) => (
+            //             <div
+            //               key={i}
+            //               className="flex items-center gap-4 group cursor-default"
+            //             >
+            //               <div className="w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center text-[#2E1CFF] text-[10px] font-bold group-hover:bg-[#2E1CFF] group-hover:text-white transition-colors border border-blue-100">
+            //                 ✓
+            //               </div>
+            //               <span className="text-slate-700 font-bold text-xs uppercase tracking-widest">
+            //                 {feat}
+            //               </span>
+            //             </div>
+            //           ))}
+            //         </div>
+            //       </div>
+            //       <div className="relative">
+            //         <div className="aspect-square bg-slate-100 rounded-[3rem] overflow-hidden shadow-3xl border border-slate-100 group">
+            //           <img
+            //             src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+            //             alt="Data analysis visualization"
+            //             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+            //           />
+            //         </div>
+            //         <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-2xl shadow-2xl border border-slate-100 hidden xl:block">
+            //           <div className="text-3xl font-black text-[#2E1CFF] mb-1">
+            //             94%
+            //           </div>
+            //           <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+            //             Efficiency Increase
+            //           </div>
+            //         </div>
+            //       </div>
+            //     </div>
+            //   </div>
+            // </section>
 
 //             <Services
 //               onViewAll={() => navigateTo("services-hub")}
@@ -310,6 +310,65 @@ const HomePage = () => (
 
     {/* ABOUT SECTION */}
     {/* (unchanged content from your home view) */}
+     <section id="about-us" className="py-24 bg-white overflow-hidden">
+              <div className="max-w-7xl mx-auto px-6">
+                <div className="grid lg:grid-cols-2 gap-20 items-center">
+                  <div className="relative">
+                    <h2 className="text-[#2E1CFF] font-bold uppercase tracking-[0.4em] text-[10px] mb-6">
+                      Our Data Thesis
+                    </h2>
+                    <h3 className="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-[1.1] mb-8">
+                      Where Petabytes Meet{" "}
+                      <span className="text-[#2E1CFF]">Strategic Clarity</span>
+                    </h3>
+                    <p className="text-lg text-slate-500 leading-relaxed mb-10 font-medium">
+                      Data isn't just an asset; it's the nervous system of the
+                      modern enterprise. Zenydata Technologies engineers the
+                      high-performance pipelines that turn raw chaos into
+                      boardroom decisions.
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      {[
+                        "Distributed Ledger Compliance",
+                        "Real-time Behavioral Mapping",
+                        "Predictive Failure Analysis",
+                        "Quantum-Ready Encryption",
+                      ].map((feat, i) => (
+                        <div
+                          key={i}
+                          className="flex items-center gap-4 group cursor-default"
+                        >
+                          <div className="w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center text-[#2E1CFF] text-[10px] font-bold group-hover:bg-[#2E1CFF] group-hover:text-white transition-colors border border-blue-100">
+                            ✓
+                          </div>
+                          <span className="text-slate-700 font-bold text-xs uppercase tracking-widest">
+                            {feat}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <div className="aspect-square bg-slate-100 rounded-[3rem] overflow-hidden shadow-3xl border border-slate-100 group">
+                      <img
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+                        alt="Data analysis visualization"
+                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                      />
+                    </div>
+                    <div className="absolute -bottom-10 -left-10 bg-white p-8 rounded-2xl shadow-2xl border border-slate-100 hidden xl:block">
+                      <div className="text-3xl font-black text-[#2E1CFF] mb-1">
+                        94%
+                      </div>
+                      <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                        Efficiency Increase
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
 
     <Services />
     <Industries />
