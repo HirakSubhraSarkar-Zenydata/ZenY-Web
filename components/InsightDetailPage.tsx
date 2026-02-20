@@ -335,35 +335,54 @@ const InsightDetailPage: React.FC = () => {
               </button>
 
               {shareOpen && (
-                <div className="absolute top-full right-0 mt-4 w-56 bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden z-50">
+                <div className="absolute top-full right-0 mt-4 w-64 bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden z-50">
+                  {/* Share on X */}
                   <a
                     href={shareLinks.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-6 py-4 text-sm font-bold text-slate-700 hover:bg-slate-950 hover:text-white transition"
+                    className="flex items-center gap-4 px-6 py-4 text-sm font-bold text-slate-700 hover:bg-slate-950 hover:text-white transition"
                   >
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
                     Share on X
                   </a>
+
+                  {/* Share on Facebook */}
                   <a
                     href={shareLinks.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-6 py-4 text-sm font-bold text-slate-700 hover:bg-slate-950 hover:text-white transition"
+                    className="flex items-center gap-4 px-6 py-4 text-sm font-bold text-slate-700 hover:bg-slate-950 hover:text-white transition"
                   >
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202z" />
+                    </svg>
                     Share on Facebook
                   </a>
+
+                  {/* Share on LinkedIn */}
                   <a
                     href={shareLinks.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-6 py-4 text-sm font-bold text-slate-700 hover:bg-slate-950 hover:text-white transition"
+                    className="flex items-center gap-4 px-6 py-4 text-sm font-bold text-slate-700 hover:bg-slate-950 hover:text-white transition"
                   >
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
                     Share on LinkedIn
                   </a>
+
+                  {/* Copy Link – using your provided SVG path */}
                   <button
                     onClick={copyToClipboard}
-                    className="w-full text-left px-6 py-4 text-sm font-bold text-slate-700 hover:bg-slate-950 hover:text-white transition"
+                    className="w-full flex items-center gap-4 text-left px-6 py-4 text-sm font-bold text-slate-700 hover:bg-slate-950 hover:text-white transition"
                   >
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="m12.505 9.678.59-.59a5 5 0 0 1 1.027 7.862l-2.829 2.83a5 5 0 0 1-7.07-7.072l2.382-2.383q.002.646.117 1.298l-1.793 1.792a4 4 0 0 0 5.657 5.657l2.828-2.828a4 4 0 0 0-1.046-6.411q.063-.081.137-.155m-1.01 4.646-.589.59a5 5 0 0 1-1.027-7.862l2.828-2.83a5 5 0 0 1 7.071 7.072l-2.382 2.383a7.7 7.7 0 0 0-.117-1.297l1.792-1.793a4 4 0 1 0-5.657-5.657l-2.828 2.828a4 4 0 0 0 1.047 6.411 2 2 0 0 1-.138.155" />
+                    </svg>
                     Copy Link
                   </button>
                 </div>
