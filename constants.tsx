@@ -93,7 +93,7 @@ export const LEADERSHIP: LeadershipMember[] = [
     name: "Nityananda Nath",
     role: "Director, Zenydata Technologies",
     image:
-      "https://res.cloudinary.com/djqf7eivl/image/upload/v1771577699/Nityananda_Nath_Director_s_Picture_for_website1_nltlr4.jpg",
+      "https://res.cloudinary.com/djqf7eivl/image/upload/v1771584389/1_diector_vvr4yh.png",
     quote:
       "At ZenyData, we believe in empowering people through data-driven simplicity. Our mission is to bring clarity to complexity. We are committed to transforming raw data into meaningful insights that drive better decisions. Innovation and transparency are at the core of everything we do. By bridging the gap between technology and human understanding, we strive to make data work for everyone — simply, securely, and smartly.",
   },
@@ -368,8 +368,8 @@ export const INSIGHTS: Insight[] = [
     id: "supply-chain-graph",
     category: "DATA WHITE PAPER",
     title: "Optimizing Graph Databases for Supply Chain Resilience",
-    author: "Dr. Elena Vance",
-    date: "Jan 20, 2025",
+    author: "Hirak Sarkar",
+    date: "Jan 20, 2026",
     readTime: "12 min",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
@@ -380,8 +380,8 @@ export const INSIGHTS: Insight[] = [
     id: "rag-search-enterprise",
     category: "AI RESEARCH",
     title: "The Role of RAG Architecture in Enterprise Search",
-    author: "Markus Thorne",
-    date: "Jan 18, 2025",
+    author: "Arka Raha",
+    date: "Jan 18, 2026",
     readTime: "8 min",
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
@@ -392,13 +392,25 @@ export const INSIGHTS: Insight[] = [
     id: "cloud-spend-optimization",
     category: "CASE STUDY",
     title: "Reducing Cloud Spend by 40% for Retail Giants",
-    author: "Sarah Jenkins",
-    date: "Jan 15, 2025",
+    author: "Abhratanu Roy",
+    date: "Jan 15, 2026",
     readTime: "10 min",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
     content:
       "Waste in the cloud is at an all-time high. Our latest research into FinOps methodologies shows that automated rightsizing and spot-instance orchestration can slash OpEx without impacting service reliability...",
+  },
+  {
+    id: "ai-driven-finops",
+    category: "CASE STUDY",
+    title: "AI-Driven FinOps Use-Case List for the Data Services Industry",
+    author: "Varun Mendiratta",
+    date: "Feb 20, 2026",
+    readTime: "10 min",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+    content:
+      "AI-enabled FinOps use cases tailored to Data Services organizations that manage large datasets, ETL/ELT pipelines, warehouses, multi-cloud platforms, and BI workloads...",
   },
 ];
 
@@ -417,5 +429,5 @@ export const STATS: Stat[] = [
   { value: "100+ PB", label: "Data Managed" },
   { value: "40%", label: "Avg Cost Reduction" },
   { value: "24/7", label: "Global Monitoring" },
-  { value: "ISO", label: "Certified Security" },
+  { value: "ISO", label: "9001 | 27001 Certified" },
 ];

@@ -96,20 +96,63 @@
 
 // export default Logo;
 
+// import React from "react";
+
+// interface LogoProps {
+//   className?: string;
+// }
+
+// const Logo: React.FC<LogoProps> = ({ className = "" }) => {
+//   return (
+//     <div className={`flex items-center select-none ${className}`}>
+//       <img
+//         src="https://res.cloudinary.com/djqf7eivl/image/upload/v1771497472/Blue_Modern_Geometric_Origami_Bird_Tech_Logo_cowivm.png"
+//         alt="Zenydata Technologies"
+//         className="h-12 w-auto object-contain"
+//       />
+//     </div>
+//   );
+// };
+
+// export default Logo;
+
 import React from "react";
 
 interface LogoProps {
   className?: string;
+  light?: boolean;
 }
 
-const Logo: React.FC<LogoProps> = ({ className = "" }) => {
+const Logo: React.FC<LogoProps> = ({ className = "", light = false }) => {
   return (
-    <div className={`flex items-center select-none ${className}`}>
-      <img
-        src="https://res.cloudinary.com/djqf7eivl/image/upload/v1771497472/Blue_Modern_Geometric_Origami_Bird_Tech_Logo_cowivm.png"
-        alt="Zenydata Technologies"
-        className="h-12 w-auto object-contain"
-      />
+    <div className={`flex items-center gap-1 select-none ${className}`}>
+      {/* Cloudinary Logo */}
+      <div className="w-11 h-11 shrink-0">
+        <img
+          src="https://res.cloudinary.com/djqf7eivl/image/upload/v1771582010/Blue_Modern_Geometric_Origami_Bird_Tech_Logo__1_-removebg-preview_dqrrn2.png"
+          alt="Zenydata Logo"
+          className="w-full h-full object-contain"
+        />
+      </div>
+
+      {/* Text */}
+      <div className="flex flex-col justify-center mt-1">
+        <span
+          className={`logo-font text-[20px] font-black tracking-tight leading-none ${
+            light ? "text-white" : "text-slate-900"
+          }`}
+        >
+          ZENYDATA
+        </span>
+
+        <span
+          className={`text-[7.5px] font-extrabold uppercase tracking-[0.45em] mt-1 ${
+            light ? "text-blue-300" : "text-slate-500"
+          }`}
+        >
+          TECHNOLOGIES
+        </span>
+      </div>
     </div>
   );
 };
