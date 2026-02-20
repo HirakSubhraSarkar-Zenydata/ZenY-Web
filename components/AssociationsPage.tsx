@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useParams } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useParams } from "react-router-dom";
 
 const AssociationsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -10,33 +10,33 @@ const AssociationsPage: React.FC = () => {
   }, [id]);
 
   const controls = useAnimation();
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
   const logos = [
     {
-      src: 'https://www.geomedsdvo.com/wp-content/uploads/2018/04/Medline.png',
-      alt: 'Medline',
-      className: 'max-h-20',
+      src: "https://www.geomedsdvo.com/wp-content/uploads/2018/04/Medline.png",
+      alt: "Medline",
+      className: "max-h-20",
     },
     {
-      src: 'https://www.salaam.com.au/hs-fs/hubfs/Salaam-HorizontalLogoRGB_FullColour.png',
-      alt: 'Salaam',
-      className: 'max-h-16',
+      src: "https://www.salaam.com.au/hs-fs/hubfs/Salaam-HorizontalLogoRGB_FullColour.png",
+      alt: "Salaam",
+      className: "max-h-16",
     },
     {
-      src: 'https://www.insaaf.com.au/favicon.ico',
-      alt: 'Insaaf',
-      className: 'max-h-20 scale-110',
+      src: "https://www.insaaf.com.au/favicon.ico",
+      alt: "Insaaf",
+      className: "max-h-20 scale-110",
     },
     {
-      src: 'https://media.licdn.com/dms/image/v2/C4E0BAQGcPW79iAbQLQ/company-logo_200_200/company-logo_200_200/0/1631324059176?e=2147483647&v=beta&t=twCtaOMTnXbO-0AKha05vQNerqrB-EyJmrqcv6sMl_8',
-      alt: 'Unimutual',
-      className: 'max-h-20 scale-105',
+      src: "https://media.licdn.com/dms/image/v2/C4E0BAQGcPW79iAbQLQ/company-logo_200_200/company-logo_200_200/0/1631324059176?e=2147483647&v=beta&t=twCtaOMTnXbO-0AKha05vQNerqrB-EyJmrqcv6sMl_8",
+      alt: "Unimutual",
+      className: "max-h-20 scale-105",
     },
     {
-      src: 'https://res.cloudinary.com/djqf7eivl/image/upload/v1749104171/Logo-Dark-500_214_hupls1.png',
-      alt: 'SRE PVT. LTD.',
-      className: 'max-h-14',
+      src: "https://res.cloudinary.com/djqf7eivl/image/upload/v1749104171/Logo-Dark-500_214_hupls1.png",
+      alt: "SRE PVT. LTD.",
+      className: "max-h-14",
     },
   ];
 
@@ -67,13 +67,15 @@ const AssociationsPage: React.FC = () => {
             <span className="text-slate-400">Alliances</span>.
           </h1>
           <p className="text-xl text-slate-500 font-medium leading-relaxed max-w-2xl">
-            We align with the world's most innovative technology providers and academic institutions to ensure our frameworks are always at the leading edge.
+            We align with the world's most innovative technology providers and
+            academic institutions to ensure our frameworks are always at the
+            leading edge.
           </p>
         </div>
       </section>
 
       {/* Strategic Ecosystem */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-32 border-t border-slate-100 relative z-10">
+      {/* <section className="max-w-7xl mx-auto px-6 lg:px-12 py-32 border-t border-slate-100 relative z-10">
         <div className="text-center mb-24">
           <h2 className="text-5xl lg:text-6xl font-black tracking-tighter text-slate-950">
             Our Strategic Ecosystem
@@ -137,9 +139,7 @@ const AssociationsPage: React.FC = () => {
             </motion.div>
           ))}
         </div>
-      </section>
-
-      
+      </section> */}
 
       {/* Trusted by marquee */}
       <section className="max-w-7xl mx-auto px-6 border-t border-slate-100 pt-20 overflow-hidden relative z-10">
@@ -157,18 +157,26 @@ const AssociationsPage: React.FC = () => {
             <motion.div
               className="flex items-center gap-14 no-scrollbar"
               animate={controls}
-              initial={{ x: '0%' }}
+              initial={{ x: "0%" }}
               onHoverStart={() => controls.stop()}
               onHoverEnd={() =>
                 controls.start({
-                  x: ['0%', '-50%'],
-                  transition: { repeat: Infinity, ease: 'linear', duration: isMobile ? 35 : 25 },
+                  x: ["0%", "-50%"],
+                  transition: {
+                    repeat: Infinity,
+                    ease: "linear",
+                    duration: isMobile ? 35 : 25,
+                  },
                 })
               }
               onViewportEnter={() =>
                 controls.start({
-                  x: ['0%', '-50%'],
-                  transition: { repeat: Infinity, ease: 'linear', duration: isMobile ? 35 : 25 },
+                  x: ["0%", "-50%"],
+                  transition: {
+                    repeat: Infinity,
+                    ease: "linear",
+                    duration: isMobile ? 35 : 25,
+                  },
                 })
               }
             >
@@ -188,6 +196,94 @@ const AssociationsPage: React.FC = () => {
             </motion.div>
           </div>
         </section>
+      </section>
+
+      <section className="py-32 bg-white relative overflow-hidden">
+        {/* Subtle background texture */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(46,28,255,0.06),transparent_40%)] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          {/* Header */}
+          <div className="text-center mb-24">
+            <span className="text-[#2E1CFF] font-black uppercase tracking-[0.5em] text-[10px] block mb-6">
+              Client Engagement
+            </span>
+            <h2 className="text-5xl lg:text-6xl font-black tracking-tighter text-slate-950">
+              How We Work With Clients
+            </h2>
+            <p className="mt-6 max-w-3xl mx-auto text-lg text-slate-600 leading-relaxed">
+              We don’t believe in opaque consulting models. Our engagement
+              process is designed for speed, clarity, and long-term impact.
+            </p>
+          </div>
+
+          {/* Steps */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+            {[
+              {
+                step: "01",
+                title: "Deep Discovery",
+                desc: "We immerse ourselves in your business, systems, and constraints before proposing solutions.",
+              },
+              {
+                step: "02",
+                title: "Architecture First",
+                desc: "Clear system design, trade-offs, and scalability decisions — before a single line of code.",
+              },
+              {
+                step: "03",
+                title: "Build in Production",
+                desc: "We ship real, production-grade systems early — not demos or throwaway prototypes.",
+              },
+              {
+                step: "04",
+                title: "Own the Outcome",
+                desc: "Post-launch optimization, monitoring, and continuous improvement are part of the engagement.",
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="group relative bg-white rounded-3xl p-10
+                     border border-slate-200
+                     shadow-[0_20px_60px_-30px_rgba(0,0,0,0.15)]
+                     hover:shadow-[0_40px_100px_-30px_rgba(46,28,255,0.35)]
+                     hover:border-[#2E1CFF]/40
+                     transition-all duration-[600ms]"
+              >
+                {/* Step number */}
+                <div className="text-5xl font-black text-slate-200 group-hover:text-[#2E1CFF] transition-colors duration-500">
+                  {item.step}
+                </div>
+
+                <h3 className="mt-6 text-2xl font-black text-slate-950">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 text-slate-600 leading-relaxed font-medium">
+                  {item.desc}
+                </p>
+
+                {/* Accent line */}
+                <div
+                  className="mt-8 h-1 w-10 bg-[#2E1CFF]/60 rounded-full
+                          scale-x-75 group-hover:scale-x-100
+                          origin-left transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom statement */}
+          <div className="mt-28 text-center">
+            <p className="text-2xl lg:text-3xl font-medium italic text-slate-700 max-w-4xl mx-auto leading-relaxed">
+              “Our clients don’t hire us for advice. They partner with us to
+              build systems that actually work.”
+            </p>
+            <p className="mt-6 text-slate-500 font-medium">
+              — Zenydata Delivery Philosophy
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   );

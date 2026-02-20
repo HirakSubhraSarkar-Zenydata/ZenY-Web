@@ -53,8 +53,6 @@
 //       </div>
 //     );
 
-    
-
 //    /* ===============================
 //      Calendly Popup Handler
 //   ================================ */
@@ -148,133 +146,133 @@
 //       </section>
 
 //       {/* Modern Features Carousel / Grid */}
-      // <section className="bg-slate-50 py-32 mb-32 relative">
-      //   <div className="max-w-7xl mx-auto px-6">
-      //     <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-20 gap-8">
-      //       <div className="max-w-2xl">
-      //         <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-blue-600 mb-6">
-      //           Execution Pillars
-      //         </h2>
-      //         <h3 className="text-4xl lg:text-5xl font-extrabold text-slate-950 leading-tight">
-      //           Architecting for{" "}
-      //           <span className="text-slate-400 italic">
-      //             Unmatched Velocity
-      //           </span>
-      //           .
-      //         </h3>
-      //       </div>
-      //       <div className="text-slate-500 font-medium text-lg max-w-sm">
-      //         Our multidisciplinary teams apply rigorous engineering principles
-      //         to every stage of the lifecycle.
-      //       </div>
-      //     </div>
+// <section className="bg-slate-50 py-32 mb-32 relative">
+//   <div className="max-w-7xl mx-auto px-6">
+//     <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-20 gap-8">
+//       <div className="max-w-2xl">
+//         <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-blue-600 mb-6">
+//           Execution Pillars
+//         </h2>
+//         <h3 className="text-4xl lg:text-5xl font-extrabold text-slate-950 leading-tight">
+//           Architecting for{" "}
+//           <span className="text-slate-400 italic">
+//             Unmatched Velocity
+//           </span>
+//           .
+//         </h3>
+//       </div>
+//       <div className="text-slate-500 font-medium text-lg max-w-sm">
+//         Our multidisciplinary teams apply rigorous engineering principles
+//         to every stage of the lifecycle.
+//       </div>
+//     </div>
 
-      //     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-      //       {service.features?.map((feature, i) => (
-      //         <div
-      //           key={i}
-      //           className="bg-white p-12 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group"
-      //         >
-      //           <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#2E1CFF] transition-all duration-500">
-      //             <svg
-      //               className="w-8 h-8 text-[#2E1CFF] group-hover:text-white"
-      //               fill="none"
-      //               stroke="currentColor"
-      //               viewBox="0 0 24 24"
-      //             >
-      //               <path
-      //                 strokeLinecap="round"
-      //                 strokeLinejoin="round"
-      //                 strokeWidth="2.5"
-      //                 d="M5 13l4 4L19 7"
-      //               />
-      //             </svg>
-      //           </div>
-      //           <h4 className="text-xl font-bold text-slate-950 mb-4 tracking-tight leading-tight">
-      //             {feature}
-      //           </h4>
-      //           <p className="text-slate-500 text-sm font-medium leading-relaxed">
-      //             Engineered to meet the highest global standards for
-      //             throughput, security, and scalability in{" "}
-      //             {service.title.toLowerCase()} environments.
-      //           </p>
-      //         </div>
-      //       ))}
-      //     </div>
-      //   </div>
-      // </section>
+//     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+//       {service.features?.map((feature, i) => (
+//         <div
+//           key={i}
+//           className="bg-white p-12 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group"
+//         >
+//           <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#2E1CFF] transition-all duration-500">
+//             <svg
+//               className="w-8 h-8 text-[#2E1CFF] group-hover:text-white"
+//               fill="none"
+//               stroke="currentColor"
+//               viewBox="0 0 24 24"
+//             >
+//               <path
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//                 strokeWidth="2.5"
+//                 d="M5 13l4 4L19 7"
+//               />
+//             </svg>
+//           </div>
+//           <h4 className="text-xl font-bold text-slate-950 mb-4 tracking-tight leading-tight">
+//             {feature}
+//           </h4>
+//           <p className="text-slate-500 text-sm font-medium leading-relaxed">
+//             Engineered to meet the highest global standards for
+//             throughput, security, and scalability in{" "}
+//             {service.title.toLowerCase()} environments.
+//           </p>
+//         </div>
+//       ))}
+//     </div>
+//   </div>
+// </section>
 
 //       {/* Methodology Section - High End Visuals */}
-      // <section className="max-w-7xl mx-auto px-6 mb-40">
-      //   <div className="grid lg:grid-cols-2 gap-24 items-center">
-      //     <div className="space-y-16">
-      //       <div>
-      //         <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-[#2E1CFF] mb-6">
-      //           Our Delivery Philosophy
-      //         </h2>
-      //         <h3 className="text-5xl font-extrabold text-slate-950 leading-[1.1]">
-      //           The Roadmap to <br /> Operational{" "}
-      //           <span className="text-slate-400">Zen</span>.
-      //         </h3>
-      //       </div>
-      //       <div className="space-y-12">
-      //         {service.methodology?.map((m, i) => (
-      //           <div key={i} className="flex gap-10 group cursor-default">
-      //             <div className="flex flex-col items-center">
-      //               <div className="text-5xl font-black text-slate-100 group-hover:text-blue-100 transition-colors duration-500">
-      //                 0{i + 1}
-      //               </div>
-      //               <div className="w-[2px] flex-grow bg-slate-50 mt-4"></div>
-      //             </div>
-      //             <div>
-      //               <h5 className="text-2xl font-bold text-slate-950 mb-3 group-hover:text-[#2E1CFF] transition-colors">
-      //                 {m.step}
-      //               </h5>
-      //               <p className="text-slate-500 font-medium leading-relaxed text-lg">
-      //                 {m.detail}
-      //               </p>
-      //             </div>
-      //           </div>
-      //         ))}
-      //       </div>
-      //     </div>
+// <section className="max-w-7xl mx-auto px-6 mb-40">
+//   <div className="grid lg:grid-cols-2 gap-24 items-center">
+//     <div className="space-y-16">
+//       <div>
+//         <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-[#2E1CFF] mb-6">
+//           Our Delivery Philosophy
+//         </h2>
+//         <h3 className="text-5xl font-extrabold text-slate-950 leading-[1.1]">
+//           The Roadmap to <br /> Operational{" "}
+//           <span className="text-slate-400">Zen</span>.
+//         </h3>
+//       </div>
+//       <div className="space-y-12">
+//         {service.methodology?.map((m, i) => (
+//           <div key={i} className="flex gap-10 group cursor-default">
+//             <div className="flex flex-col items-center">
+//               <div className="text-5xl font-black text-slate-100 group-hover:text-blue-100 transition-colors duration-500">
+//                 0{i + 1}
+//               </div>
+//               <div className="w-[2px] flex-grow bg-slate-50 mt-4"></div>
+//             </div>
+//             <div>
+//               <h5 className="text-2xl font-bold text-slate-950 mb-3 group-hover:text-[#2E1CFF] transition-colors">
+//                 {m.step}
+//               </h5>
+//               <p className="text-slate-500 font-medium leading-relaxed text-lg">
+//                 {m.detail}
+//               </p>
+//             </div>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
 
-      //     <div className="relative">
-      //       <div className="bg-[#2E1CFF] p-16 lg:p-24 rounded-[4rem] text-white relative overflow-hidden shadow-4xl shadow-blue-600/30 group">
-      //         <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 blur-[100px] rounded-full transition-all group-hover:bg-white/20"></div>
-      //         <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-blue-900/40 blur-[100px] rounded-full"></div>
+//     <div className="relative">
+//       <div className="bg-[#2E1CFF] p-16 lg:p-24 rounded-[4rem] text-white relative overflow-hidden shadow-4xl shadow-blue-600/30 group">
+//         <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 blur-[100px] rounded-full transition-all group-hover:bg-white/20"></div>
+//         <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-blue-900/40 blur-[100px] rounded-full"></div>
 
-      //         <div className="relative z-10 space-y-12">
-      //           <svg
-      //             className="w-16 h-16 text-blue-300 opacity-40"
-      //             fill="currentColor"
-      //             viewBox="0 0 32 32"
-      //           >
-      //             <path d="M10 8v8l-4 4v-12h4zm16 0v8l-4 4v-12h4z"></path>
-      //           </svg>
-      //           <h4 className="text-3xl lg:text-4xl font-extrabold italic leading-tight tracking-tight">
-      //             "Zenydata's {service.title} approach didn't just solve our
-      //             immediate issues; it fundamentally changed how our leadership
-      //             perceives technology."
-      //           </h4>
-      //           <div className="flex items-center gap-6 pt-6">
-      //             <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center font-black text-xl">
-      //               VP
-      //             </div>
-      //             <div>
-      //               <div className="font-black text-sm uppercase tracking-[0.2em]">
-      //                 VP of Engineering
-      //               </div>
-      //               <div className="text-[10px] text-blue-200 uppercase font-black tracking-[0.4em] mt-1">
-      //                 Global Logistics Leader
-      //               </div>
-      //             </div>
-      //           </div>
-      //         </div>
-      //       </div>
-      //     </div>
-      //   </div>
-      // </section>
+//         <div className="relative z-10 space-y-12">
+//           <svg
+//             className="w-16 h-16 text-blue-300 opacity-40"
+//             fill="currentColor"
+//             viewBox="0 0 32 32"
+//           >
+//             <path d="M10 8v8l-4 4v-12h4zm16 0v8l-4 4v-12h4z"></path>
+//           </svg>
+//           <h4 className="text-3xl lg:text-4xl font-extrabold italic leading-tight tracking-tight">
+//             "Zenydata's {service.title} approach didn't just solve our
+//             immediate issues; it fundamentally changed how our leadership
+//             perceives technology."
+//           </h4>
+//           <div className="flex items-center gap-6 pt-6">
+//             <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center font-black text-xl">
+//               VP
+//             </div>
+//             <div>
+//               <div className="font-black text-sm uppercase tracking-[0.2em]">
+//                 VP of Engineering
+//               </div>
+//               <div className="text-[10px] text-blue-200 uppercase font-black tracking-[0.4em] mt-1">
+//                 Global Logistics Leader
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   </div>
+// </section>
 
 //       {/* Dynamic CTA */}
 //       <section className="max-w-auto mx-auto px-6 text-center bg-slate-50">
@@ -291,7 +289,7 @@
 //             audit your current architecture and deliver a strategic growth plan.
 //           </p>
 //           <div className="flex justify-center gap-6 pt-6">
-//             <button 
+//             <button
 //             onClick={openCalendlyPopup}
 //             className="bg-slate-950 text-white px-14 py-6 rounded-2xl font-black uppercase tracking-[0.3em] text-[11px] hover:bg-[#2E1CFF] transition-all shadow-4xl active:scale-95">
 //               Consult with Domain Experts
@@ -325,7 +323,7 @@ const ServiceDetailPage: React.FC = () => {
   const navigate = useNavigate();
 
   const service = SERVICES.find(
-    (s) => s.id.toLowerCase() === id?.toLowerCase()
+    (s) => s.id.toLowerCase() === id?.toLowerCase(),
   );
 
   /* ===============================
@@ -384,7 +382,6 @@ const ServiceDetailPage: React.FC = () => {
 
   return (
     <div className="bg-white min-h-screen pt-32 pb-24 overflow-hidden">
-
       {/* ===============================
          HERO
       ================================ */}
@@ -400,7 +397,7 @@ const ServiceDetailPage: React.FC = () => {
               </span>
             </div>
 
-            <h1 className="text-5xl lg:text-6xl font-black text-slate-950 leading-[1] tracking-tight">
+            <h1 className="text-5xl lg:text-8xl font-black text-slate-950 leading-[1] tracking-tight">
               {service.title.split(" ").map((word, i) => (
                 <span
                   key={i}
@@ -535,9 +532,6 @@ const ServiceDetailPage: React.FC = () => {
         </div>
       </section>
 
-
-      
-
       {/* ===============================
          METHODOLOGY
       ================================ */}
@@ -630,15 +624,15 @@ const ServiceDetailPage: React.FC = () => {
             audit your current architecture and deliver a strategic growth plan.
           </p>
           <div className="flex justify-center gap-6 pt-6">
-            <button 
-            onClick={openCalendlyPopup}
-            className="bg-slate-950 text-white px-14 py-6 rounded-2xl font-black uppercase tracking-[0.3em] text-[11px] hover:bg-[#2E1CFF] transition-all shadow-4xl active:scale-95">
+            <button
+              onClick={openCalendlyPopup}
+              className="bg-slate-950 text-white px-14 py-6 rounded-2xl font-black uppercase tracking-[0.3em] text-[11px] hover:bg-[#2E1CFF] transition-all shadow-4xl active:scale-95"
+            >
               Consult with Domain Experts
             </button>
           </div>
         </div>
       </section>
-
 
       {/* <section className="max-w-auto mx-auto px-4 sm:px-6 text-center bg-slate-50">
   <div className="py-16 sm:py-20 lg:py-24 border-y border-slate-100 space-y-8 sm:space-y-10">
@@ -667,12 +661,8 @@ const ServiceDetailPage: React.FC = () => {
 
   </div>
 </section> */}
-
     </div>
   );
 };
 
 export default ServiceDetailPage;
-
-
-

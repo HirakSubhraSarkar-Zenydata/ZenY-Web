@@ -144,132 +144,38 @@ const AboutPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-16">
             <div className="space-y-6">
-              <h3 className="text-3xl font-black tracking-tight uppercase">Integrity</h3>
+              <h3 className="text-3xl font-black tracking-tight uppercase">
+                Integrity
+              </h3>
               <p className="text-slate-500 font-medium leading-relaxed">
-                We operate with radical transparency, ensuring that our architectural decisions prioritize your enterprise's long-term health over short-term gains.
+                We operate with radical transparency, ensuring that our
+                architectural decisions prioritize your enterprise's long-term
+                health over short-term gains.
               </p>
             </div>
             <div className="space-y-6">
-              <h3 className="text-3xl font-black tracking-tight uppercase">Velocity</h3>
+              <h3 className="text-3xl font-black tracking-tight uppercase">
+                Velocity
+              </h3>
               <p className="text-slate-500 font-medium leading-relaxed">
-                Our agile frameworks are designed to bypass corporate inertia and deliver production-grade systems in record cycles.
+                Our agile frameworks are designed to bypass corporate inertia
+                and deliver production-grade systems in record cycles.
               </p>
             </div>
             <div className="space-y-6">
-              <h3 className="text-3xl font-black tracking-tight uppercase">Precision</h3>
+              <h3 className="text-3xl font-black tracking-tight uppercase">
+                Precision
+              </h3>
               <p className="text-slate-500 font-medium leading-relaxed">
-                We don't believe in 'good enough'. Our engineering practice is rooted in sub-millisecond optimization and SOC2 compliance.
+                We don't believe in 'good enough'. Our engineering practice is
+                rooted in sub-millisecond optimization and SOC2 compliance.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Culture Section – smaller cards */}
-      <section className="py-28 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <span className="text-[#2E1CFF] font-black uppercase tracking-[0.5em] text-[10px] block mb-5">
-              How We Live & Work
-            </span>
-            <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-slate-950">
-              Our Culture
-            </h2>
-            <p className="mt-5 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              We are builders, thinkers, and relentless learners — driven by curiosity, ownership, and the belief that exceptional engineering begins with exceptional people.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            {[
-              {
-                title: "Growth Mindset",
-                desc: "We embrace challenges, persist in the face of setbacks, and find lessons in the success of others.",
-                svg: (
-                  <svg className="w-10 h-10 text-[#2E1CFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Work-Life Balance",
-                desc: "We believe in taking time to recharge so that we can bring our best selves to work.",
-                svg: (
-                  <svg className="w-10 h-10 text-[#2E1CFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Continuous Learning",
-                desc: "We invest in professional development and encourage exploration of new skills and technologies.",
-                svg: (
-                  <svg className="w-10 h-10 text-[#2E1CFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Community Impact",
-                desc: "We dedicate time and resources to giving back to the communities where we live and work.",
-                svg: (
-                  <svg className="w-10 h-10 text-[#2E1CFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM6 5a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Recognition",
-                desc: "We celebrate achievements both big and small, acknowledging the contributions of every team member.",
-                svg: (
-                  <svg className="w-10 h-10 text-[#2E1CFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Creative Expression",
-                desc: "We foster an environment where creative thinking is encouraged and new ideas are welcomed.",
-                svg: (
-                  <svg className="w-10 h-10 text-[#2E1CFF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7H9" />
-                  </svg>
-                ),
-              },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="group bg-white rounded-2xl p-6 lg:p-8 shadow-md border border-slate-100 hover:border-[#2E1CFF]/30 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
-              >
-                <div className="mb-5 transform group-hover:scale-110 transition-transform duration-300">
-                  {item.svg}
-                </div>
-                <h3 className="text-xl lg:text-2xl font-black text-slate-900 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-slate-600 font-medium leading-relaxed text-sm lg:text-base">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Closing statement */}
-          <div className="mt-20 text-center">
-            <p className="text-2xl lg:text-3xl font-medium italic text-slate-700 max-w-4xl mx-auto leading-relaxed">
-              "We don’t just build technology. We build trust, capability, and long-term advantage — together."
-            </p>
-            <p className="mt-6 text-slate-500 font-medium">
-              — The Zenydata Collective
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ──────────────────────────────────────────────── */}
-      {/*        WHAT MAKES ZENYDATA DIFFERENT              */}
-      {/* ──────────────────────────────────────────────── */}
-       <section className="py-32 bg-slate-950 text-white relative overflow-hidden">
+      <section className="py-32 bg-slate-950 text-white relative overflow-hidden">
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#2E1CFF]/20 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -338,9 +244,11 @@ const AboutPage: React.FC = () => {
 
                 {/* Overlays */}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-slate-950/30" />
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100
                   bg-gradient-to-br from-[#2E1CFF]/35 via-transparent
-                  transition-opacity duration-[900ms]" />
+                  transition-opacity duration-[900ms]"
+                />
 
                 {/* Content */}
                 <div className="relative z-10 h-full flex flex-col justify-end px-10 pb-12">
@@ -348,14 +256,18 @@ const AboutPage: React.FC = () => {
                     {item.title}
                   </h3>
 
-                  <div className="mt-4 h-px w-12 bg-[#2E1CFF]/70
+                  <div
+                    className="mt-4 h-px w-12 bg-[#2E1CFF]/70
                     scale-x-75 group-hover:scale-x-100
-                    origin-left transition-transform duration-700" />
+                    origin-left transition-transform duration-700"
+                  />
 
-                  <p className="mt-6 text-white/90 text-lg leading-relaxed
+                  <p
+                    className="mt-6 text-white/90 text-lg leading-relaxed
                     opacity-0 translate-y-4
                     group-hover:opacity-100 group-hover:translate-y-0
-                    transition-all duration-700 delay-150">
+                    transition-all duration-700 delay-150"
+                  >
                     {item.desc}
                   </p>
                 </div>
@@ -365,103 +277,177 @@ const AboutPage: React.FC = () => {
 
           <div className="mt-24 text-center">
             <p className="text-3xl lg:text-4xl font-black italic text-white/90 max-w-5xl mx-auto">
-              We are not another consulting firm.<br />
+              We are not another consulting firm.
+              <br />
               We are the engineering partner you wish you had met earlier.
             </p>
           </div>
         </div>
       </section>
 
-
-      {/* ──────────────────────────────────────────────── */}
-{/*        HOW WE WORK WITH CLIENTS                  */}
-{/* ──────────────────────────────────────────────── */}
-<section className="py-32 bg-white relative overflow-hidden">
-  {/* Subtle background texture */}
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(46,28,255,0.06),transparent_40%)] pointer-events-none" />
-
-  <div className="max-w-7xl mx-auto px-6 relative z-10">
-    {/* Header */}
-    <div className="text-center mb-24">
-      <span className="text-[#2E1CFF] font-black uppercase tracking-[0.5em] text-[10px] block mb-6">
-        Client Engagement
-      </span>
-      <h2 className="text-5xl lg:text-6xl font-black tracking-tighter text-slate-950">
-        How We Work With Clients
-      </h2>
-      <p className="mt-6 max-w-3xl mx-auto text-lg text-slate-600 leading-relaxed">
-        We don’t believe in opaque consulting models.  
-        Our engagement process is designed for speed, clarity, and long-term impact.
-      </p>
-    </div>
-
-    {/* Steps */}
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-      {[
-        {
-          step: "01",
-          title: "Deep Discovery",
-          desc: "We immerse ourselves in your business, systems, and constraints before proposing solutions.",
-        },
-        {
-          step: "02",
-          title: "Architecture First",
-          desc: "Clear system design, trade-offs, and scalability decisions — before a single line of code.",
-        },
-        {
-          step: "03",
-          title: "Build in Production",
-          desc: "We ship real, production-grade systems early — not demos or throwaway prototypes.",
-        },
-        {
-          step: "04",
-          title: "Own the Outcome",
-          desc: "Post-launch optimization, monitoring, and continuous improvement are part of the engagement.",
-        },
-      ].map((item, idx) => (
-        <div
-          key={idx}
-          className="group relative bg-white rounded-3xl p-10
-                     border border-slate-200
-                     shadow-[0_20px_60px_-30px_rgba(0,0,0,0.15)]
-                     hover:shadow-[0_40px_100px_-30px_rgba(46,28,255,0.35)]
-                     hover:border-[#2E1CFF]/40
-                     transition-all duration-[600ms]"
-        >
-          {/* Step number */}
-          <div className="text-5xl font-black text-slate-200 group-hover:text-[#2E1CFF] transition-colors duration-500">
-            {item.step}
+      {/* Our Culture Section – smaller cards */}
+      <section className="py-28 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-[#2E1CFF] font-black uppercase tracking-[0.5em] text-[10px] block mb-5">
+              How We Live & Work
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-black tracking-tighter text-slate-950">
+              Our Culture
+            </h2>
+            <p className="mt-5 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              We are builders, thinkers, and relentless learners — driven by
+              curiosity, ownership, and the belief that exceptional engineering
+              begins with exceptional people.
+            </p>
           </div>
 
-          <h3 className="mt-6 text-2xl font-black text-slate-950">
-            {item.title}
-          </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            {[
+              {
+                title: "Growth Mindset",
+                desc: "We embrace challenges, persist in the face of setbacks, and find lessons in the success of others.",
+                svg: (
+                  <svg
+                    className="w-10 h-10 text-[#2E1CFF]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    />
+                  </svg>
+                ),
+              },
+              {
+                title: "Work-Life Balance",
+                desc: "We believe in taking time to recharge so that we can bring our best selves to work.",
+                svg: (
+                  <svg
+                    className="w-10 h-10 text-[#2E1CFF]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                ),
+              },
+              {
+                title: "Continuous Learning",
+                desc: "We invest in professional development and encourage exploration of new skills and technologies.",
+                svg: (
+                  <svg
+                    className="w-10 h-10 text-[#2E1CFF]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                    />
+                  </svg>
+                ),
+              },
+              {
+                title: "Community Impact",
+                desc: "We dedicate time and resources to giving back to the communities where we live and work.",
+                svg: (
+                  <svg
+                    className="w-10 h-10 text-[#2E1CFF]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM6 5a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg>
+                ),
+              },
+              {
+                title: "Recognition",
+                desc: "We celebrate achievements both big and small, acknowledging the contributions of every team member.",
+                svg: (
+                  <svg
+                    className="w-10 h-10 text-[#2E1CFF]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                    />
+                  </svg>
+                ),
+              },
+              {
+                title: "Creative Expression",
+                desc: "We foster an environment where creative thinking is encouraged and new ideas are welcomed.",
+                svg: (
+                  <svg
+                    className="w-10 h-10 text-[#2E1CFF]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7H9"
+                    />
+                  </svg>
+                ),
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="group bg-white rounded-2xl p-6 lg:p-8 shadow-md border border-slate-100 hover:border-[#2E1CFF]/30 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
+              >
+                <div className="mb-5 transform group-hover:scale-110 transition-transform duration-300">
+                  {item.svg}
+                </div>
+                <h3 className="text-xl lg:text-2xl font-black text-slate-900 mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-slate-600 font-medium leading-relaxed text-sm lg:text-base">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
 
-          <p className="mt-4 text-slate-600 leading-relaxed font-medium">
-            {item.desc}
-          </p>
-
-          {/* Accent line */}
-          <div className="mt-8 h-1 w-10 bg-[#2E1CFF]/60 rounded-full
-                          scale-x-75 group-hover:scale-x-100
-                          origin-left transition-transform duration-500" />
+          {/* Closing statement */}
+          <div className="mt-20 text-center">
+            <p className="text-2xl lg:text-3xl font-medium italic text-slate-700 max-w-4xl mx-auto leading-relaxed">
+              "We don’t just build technology. We build trust, capability, and
+              long-term advantage — together."
+            </p>
+            <p className="mt-6 text-slate-500 font-medium">
+              — The Zenydata Collective
+            </p>
+          </div>
         </div>
-      ))}
-    </div>
-
-    {/* Bottom statement */}
-    <div className="mt-28 text-center">
-      <p className="text-2xl lg:text-3xl font-medium italic text-slate-700 max-w-4xl mx-auto leading-relaxed">
-        “Our clients don’t hire us for advice.  
-        They partner with us to build systems that actually work.”
-      </p>
-      <p className="mt-6 text-slate-500 font-medium">
-        — Zenydata Delivery Philosophy
-      </p>
-    </div>
-  </div>
-</section>
-
+      </section>
     </div>
   );
 };

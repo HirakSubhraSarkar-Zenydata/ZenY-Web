@@ -26,23 +26,24 @@ const DataLabPage: React.FC = () => {
             Project: ERP AI Agent
           </h3>
           <p className="text-slate-500 font-medium leading-relaxed mb-10">
-            Builded an AI agent for ERPs using MCP where it can perform full
-            CRUD operation provide intelligence and many more
+            We are working on an AI agent for ERPs using MCP where it can
+            perform full CRUD operation provide intelligence and many more
           </p>
           <button className="text-blue-500 font-black uppercase tracking-widest text-[10px] flex items-center gap-3">
-            View on GitHub <span>→</span>
+            Coming soon <span>→</span>
           </button>
         </div>
         <div className="p-16 lg:p-24 bg-[#020617] hover:bg-slate-950 transition-colors group">
           <h3 className="text-3xl font-black uppercase tracking-tighter mb-6 group-hover:text-blue-500 transition-colors">
-            Project: Data Encryption SDK
+            Project: Golden Customer Dedup Framework
           </h3>
           <p className="text-slate-500 font-medium leading-relaxed mb-10">
-            Lattice-based encryption wrappers for existing AWS/Azure storage
-            blobs.
+            We are building a framework to create golden customer dedup
+            framework where we can use it to create a golden customer record
+            which can be used across the organization.
           </p>
           <button className="text-blue-500 font-black uppercase tracking-widest text-[10px] flex items-center gap-3">
-            Download SDK <span>→</span>
+            Coming soon <span>→</span>
           </button>
         </div>
       </section>

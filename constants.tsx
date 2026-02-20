@@ -80,7 +80,7 @@ export const HERO_SLIDES: HeroSlide[] = [
   {
     id: 3,
     type: "video",
-    url: "https://res.cloudinary.com/djqf7eivl/video/upload/v1769684085/18069700-uhd_2160_3840_24fps_d5egrq.mp4", // 👈 paste your video link here
+    url: "https://res.cloudinary.com/djqf7eivl/video/upload/v1771497907/3141208-uhd_3840_2160_25fps_vp3udl.mp4", // 👈 paste your video link here
     badge: "Real-time Flow",
     title: "Active Data Fabrics",
     subtitle: "",
@@ -93,7 +93,7 @@ export const LEADERSHIP: LeadershipMember[] = [
     name: "Nityananda Nath",
     role: "Director, Zenydata Technologies",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
+      "https://res.cloudinary.com/djqf7eivl/image/upload/v1771577699/Nityananda_Nath_Director_s_Picture_for_website1_nltlr4.jpg",
     quote:
       "At ZenyData, we believe in empowering people through data-driven simplicity. Our mission is to bring clarity to complexity. We are committed to transforming raw data into meaningful insights that drive better decisions. Innovation and transparency are at the core of everything we do. By bridging the gap between technology and human understanding, we strive to make data work for everyone — simply, securely, and smartly.",
   },
@@ -104,15 +104,15 @@ export const ADVISORS: Advisor[] = [
     name: "Avishek Mitra",
     role: "Global Advisor",
     image:
-      "https://res.cloudinary.com/djqf7eivl/image/upload/v1770891064/Gemini_Generated_Image_9vvtqi9vvtqi9vvt_fvmwrz.png",
-    bio: "A visionary strategist with over two decades of experience in driving digital transformation for Fortune 500 companies. Avishek provides critical guidance on global market entry and high-level architectural standards.",
+      "https://res.cloudinary.com/djqf7eivl/image/upload/v1771493857/Avi1_o6yeln.png",
+    bio: "A visionary strategist with over two decades of experience in driving digital transformation for Fortune 500 companies. Avishek provides strategic guidance on large scale data transformations, a hands on data leader with consulting experience across multiple industries and specializes understanding in retail, fmcg and .",
   },
 ];
 
 export const SERVICES: ServiceCard[] = [
   {
     id: "data-product",
-    title: "Data as a Product",
+    title: "AI & Data Engineering",
     description:
       "Shifting from data storage to value creation by treating datasets as high-quality, reusable, and interoperable enterprise assets.",
     longDescription:
@@ -177,8 +177,8 @@ export const SERVICES: ServiceCard[] = [
     ],
   },
   {
-    id: "cloud-data-platform",
-    title: "Cloud Data Platform",
+    id: "ai-data-platform",
+    title: "AI Powered Data Platform",
     description:
       "Highly scalable, cloud-native ecosystems built on hybrid foundations to unify diverse information streams.",
     longDescription:
@@ -211,8 +211,8 @@ export const SERVICES: ServiceCard[] = [
     ],
   },
   {
-    id: "digital-integration",
-    title: "Digital Integration",
+    id: "data-digital-integration",
+    title: "Data & Digital Integration",
     description:
       "Unifying siloed infrastructures through intelligent API layers and microservices to build a resilient backbone.",
     longDescription:
@@ -276,35 +276,37 @@ export const SERVICES: ServiceCard[] = [
     ],
   },
   {
-    id: "data-visualization",
-    title: "Data Visualization",
+    id: "report-data-automation",
+    title: "Report & Data Automation",
     description:
-      "Translating high-dimensional datasets into intuitive, real-time executive interfaces and dashboards.",
+      "Designing automated reporting ecosystems that transform raw data into reliable, real-time business intelligence.",
     longDescription:
-      "Insight is only as good as its delivery. We create immersive data narratives that allow decision-makers to see the 'why' behind the 'what' in real-time.",
+      "Modern businesses generate massive volumes of data — but manual reporting slows decision-making. We build end-to-end data automation pipelines that collect, transform, validate, and visualize data seamlessly. From scheduled executive reports to real-time dashboards, we ensure accuracy, scalability, and zero manual intervention.",
     icon: "https://img.icons8.com/ios-filled/50/2E1CFF/mind-map.png",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
     link: "#",
     features: [
-      "Immersive 3D charts",
-      "Mobile-first reporting",
-      "Voice-activated analytics",
-      "Interactive storytelling",
+      "Automated ETL/ELT pipelines",
+      "Scheduled & real-time reporting",
+      "Self-service BI dashboards",
+      "Data validation & anomaly detection",
     ],
     methodology: [
       {
-        step: "Insight Discovery",
-        detail: "Defining the key performance indicators that actually matter.",
-      },
-      {
-        step: "Visual Prototyping",
-        detail: "Drafting wireframes for high-impact data presentation.",
-      },
-      {
-        step: "Dashboard Rollout",
+        step: "Data Integration",
         detail:
-          "Deploying responsive interfaces with sub-second update cycles.",
+          "Connecting multiple data sources (databases, APIs, CSVs, cloud storage) into a unified pipeline.",
+      },
+      {
+        step: "Transformation & Automation",
+        detail:
+          "Cleaning, aggregating, and transforming data with automated workflows and scheduling.",
+      },
+      {
+        step: "Reporting & Monitoring",
+        detail:
+          "Deploying dashboards and automated reports with built-in alerts and performance tracking.",
       },
     ],
   },

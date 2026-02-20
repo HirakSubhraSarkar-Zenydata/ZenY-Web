@@ -151,43 +151,43 @@
 //           </div>
 
 //           {/* Company */}
-          // <div className="lg:col-span-3 space-y-8">
-          //   <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-500">
-          //     Global Hub
-          //   </h5>
-          //   <div className="space-y-6">
-          //     <ul className="space-y-4">
-          //       <li>
-          //         <button
-          //           onClick={() => onNavigate("about")}
-          //           className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
-          //         >
-          //           About Zenydata
-          //         </button>
-          //       </li>
-          //       <li>
-          //         <button className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] transition-all">
-          //           Leadership
-          //         </button>
-          //       </li>
-          //       <li>
-          //         <button className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] transition-all">
-          //           Careers
-          //         </button>
-          //       </li>
-          //     </ul>
-          //     <div className="pt-6 border-t border-white/5 space-y-2">
-          //       <div className="text-[9px] font-black uppercase tracking-widest text-slate-500">
-          //         Global Headquarters
-          //       </div>
-          //       <p className="text-slate-300 text-sm font-medium">
-          //         Unit 706, 7th Floor OM Tower, 32 Chowringhee Road, Park St,
-          //         <br />
-          //         Kolkata, 700071
-          //       </p>
-          //     </div>
-          //   </div>
-          // </div>
+// <div className="lg:col-span-3 space-y-8">
+//   <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-500">
+//     Global Hub
+//   </h5>
+//   <div className="space-y-6">
+//     <ul className="space-y-4">
+//       <li>
+//         <button
+//           onClick={() => onNavigate("about")}
+//           className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
+//         >
+//           About Zenydata
+//         </button>
+//       </li>
+//       <li>
+//         <button className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] transition-all">
+//           Leadership
+//         </button>
+//       </li>
+//       <li>
+//         <button className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] transition-all">
+//           Careers
+//         </button>
+//       </li>
+//     </ul>
+//     <div className="pt-6 border-t border-white/5 space-y-2">
+//       <div className="text-[9px] font-black uppercase tracking-widest text-slate-500">
+//         Global Headquarters
+//       </div>
+//       <p className="text-slate-300 text-sm font-medium">
+//         Unit 706, 7th Floor OM Tower, 32 Chowringhee Road, Park St,
+//         <br />
+//         Kolkata, 700071
+//       </p>
+//     </div>
+//   </div>
+// </div>
 //         </div>
 
 //         {/* Bottom Legal Bar */}
@@ -226,7 +226,6 @@
 import React from "react";
 import Logo from "./Logo";
 import { useNavigate } from "react-router-dom";
-
 
 const Footer: React.FC = () => {
   const navigate = useNavigate(); // ✅ must be inside component
@@ -370,16 +369,24 @@ const Footer: React.FC = () => {
                   Partner Program
                 </button>
               </li>
+              <li>
+                <button
+                  onClick={() => navigate("/about")}
+                  className="text-slate-400 font-bold text-sm hover:text-[#2E1CFF] hover:translate-x-1 transition-all duration-300"
+                >
+                  About Zenydata
+                </button>
+              </li>
             </ul>
           </div>
 
           {/* Company */}
           <div className="lg:col-span-3 space-y-8">
             <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-500">
-              Global Hub
+              Contacts
             </h5>
             <div className="space-y-6">
-              <ul className="space-y-4">
+              {/* <ul className="space-y-4">
                 <li>
                   <button
                     onClick={() => navigate("/about")}
@@ -398,16 +405,22 @@ const Footer: React.FC = () => {
                     Careers
                   </button>
                 </li>
-              </ul>
-              <div className="pt-6 border-t border-white/5 space-y-2">
+              </ul> */}
+              <div className=" border-t border-white/5 space-y-2">
                 <div className="text-[9px] font-black uppercase tracking-widest text-slate-500">
-                  Global Headquarters
+                  Address
                 </div>
                 <p className="text-slate-300 text-sm font-medium">
                   Unit 706, 7th Floor OM Tower, 32 Chowringhee Road, Park St,
                   <br />
                   Kolkata, 700071
                 </p>
+                <div className="pt-4 text-[11px] font-black uppercase tracking-widest text-slate-500">
+                  Phone : (+91) 8100151002
+                </div>
+                <div className="text-[11px] font-black uppercase tracking-widest text-slate-500">
+                  Email : sales@zenydata.com
+                </div>
               </div>
             </div>
           </div>
@@ -425,10 +438,13 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] font-black uppercase tracking-widest text-slate-500">
-            <a href="#" className="hover:text-blue-500 transition-colors">
+            <a
+              href="/privacy-policy"
+              className="hover:text-blue-500 transition-colors"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-blue-500 transition-colors">
+            {/* <a href="#" className="hover:text-blue-500 transition-colors">
               Terms of Service
             </a>
             <a href="#" className="hover:text-blue-500 transition-colors">
@@ -436,7 +452,7 @@ const Footer: React.FC = () => {
             </a>
             <a href="#" className="hover:text-blue-500 transition-colors">
               Ethics & AI
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
@@ -445,6 +461,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-
-
-

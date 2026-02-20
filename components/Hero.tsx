@@ -264,7 +264,6 @@
 
 ////-----------------------------------------------inp--------------------------------------
 
-
 // import React, { useState, useEffect } from "react";
 // import { HERO_SLIDES } from "../constants";
 
@@ -463,6 +462,7 @@
 
 import React, { useState, useEffect } from "react";
 import { HERO_SLIDES } from "../constants";
+import { useNavigate } from "react-router-dom";
 
 const Hero: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -494,6 +494,7 @@ const Hero: React.FC = () => {
   ];
 
   const currentSlide = HERO_SLIDES[activeIndex];
+  const navigate = useNavigate();
 
   return (
     <section
@@ -629,11 +630,17 @@ const Hero: React.FC = () => {
 
           {/* CTAs */}
           <div className="fade-enter flex flex-col sm:flex-row gap-4">
-            <button className="px-7 py-3 bg-[#2E1CFF] text-white font-bold rounded-md text-[9px] uppercase tracking-[0.25em] hover:bg-blue-600 transition-all shadow-lg shadow-blue-900/40 active:scale-95">
+            <button
+              onClick={() => navigate("/services")}
+              className="px-8 py-3.5 bg-[#2E1CFF] text-white font-bold rounded text-[10px] uppercase tracking-widest hover:bg-blue-600 transition-all shadow-xl shadow-blue-900/40 active:scale-95"
+            >
               Explore Solutions
             </button>
-            <button className="px-7 py-3 bg-white/10 text-white font-bold rounded-md border border-white/20 backdrop-blur-md text-[9px] uppercase tracking-[0.25em] hover:bg-white/20 transition-all">
-              Research
+            <button
+              onClick={() => navigate("/insights")}
+              className="px-8 py-3.5 bg-white/10 text-white font-bold rounded border border-white/20 backdrop-blur-md text-[10px] uppercase tracking-widest hover:bg-white/20 transition-all"
+            >
+              Case Study
             </button>
           </div>
         </div>
@@ -671,10 +678,3 @@ const Hero: React.FC = () => {
 };
 
 export default Hero;
-
-
-
-
-
-
-

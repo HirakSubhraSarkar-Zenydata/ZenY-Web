@@ -1,9 +1,6 @@
-
 // import React, { useEffect } from 'react';
 // import { SERVICES } from '../constants';
 // import { animate, inView, stagger } from "motion";
-
-
 
 // interface ServicesPageProps {
 //   onServiceSelect?: (id: string) => void;
@@ -19,7 +16,7 @@
 //     ================================ */
 //     useEffect(() => {
 //       const scriptId = "calendly-widget-script";
-  
+
 //       if (!document.getElementById(scriptId)) {
 //         const script = document.createElement("script");
 //         script.id = scriptId;
@@ -64,7 +61,6 @@
 //   });
 // }, []);
 
-
 //   return (
 //     <div className="bg-white min-h-screen pt-32 pb-24">
 //       {/* Page Hero - High Impact */}
@@ -87,8 +83,8 @@
 //       {/* Main Services Grid with Alternating Visuals */}
 //       <section className="max-w-7xl mx-auto px-6 grid gap-48">
 //         {SERVICES.map((service, idx) => (
-//           <div 
-//             key={idx} 
+//           <div
+//             key={idx}
 //             className={`flex flex-col lg:flex-row items-center gap-20 ${idx % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
 //           >
 //             {/* Left/Right Text Content */}
@@ -106,7 +102,7 @@
 //               </div>
 
 //               <div className="flex items-center gap-6 pt-6">
-//                 <button 
+//                 <button
 //                   onClick={() => onServiceSelect?.(service.id)}
 //                   className="px-10 py-4 bg-[#2E1CFF] text-white rounded-xl text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-blue-700 hover:shadow-2xl hover:shadow-blue-600/30 transition-all active:scale-95"
 //                 >
@@ -114,13 +110,13 @@
 //                 </button>
 //               </div>
 //             </div>
-            
+
 //             {/* Visual Element */}
 //             <div className="flex-1 w-full relative cursor-pointer" onClick={() => onServiceSelect?.(service.id)}>
 //               <div className="aspect-[16/11] bg-slate-100 rounded-[3rem] overflow-hidden group shadow-3xl shadow-slate-200">
-//                  <img 
-//                   src={service.image} 
-//                   alt={service.title} 
+//                  <img
+//                   src={service.image}
+//                   alt={service.title}
 //                   className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
 //                  />
 //               </div>
@@ -194,8 +190,6 @@
 //     </div>
 //   </div>
 // </section>
-
-
 
 //     </div>
 //   );
@@ -596,7 +590,6 @@
 // export default ServicesPage;
 // -------------------------------------------------------------------------------------------------------
 
-
 import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { SERVICES } from "../constants";
@@ -711,9 +704,7 @@ const ServicesPage: React.FC = () => {
 
             <h1 className="text-6xl lg:text-8xl font-extrabold text-slate-950 mb-12 leading-[1] tracking-tight">
               <span className="block">Comprehensive</span>
-              <span className="block text-slate-400">
-                Digital Solutions.
-              </span>
+              <span className="block text-slate-400">Digital Solutions.</span>
             </h1>
 
             <p className="text-xl lg:text-2xl text-slate-500 max-w-2xl leading-relaxed font-medium">
@@ -770,8 +761,8 @@ const ServicesPage: React.FC = () => {
               </Magnetic> */}
 
               <button
-  onClick={() => navigate(`/services/${service.id}`)}
-  className="
+                onClick={() => navigate(`/services/${service.id}`)}
+                className="
     bg-[#2E1CFF]
     text-white
     px-12
@@ -789,10 +780,9 @@ const ServicesPage: React.FC = () => {
     shadow-3xl
     shadow-blue-900/40
   "
->
-  Read More
-</button>
-
+              >
+                Read More
+              </button>
             </motion.div>
 
             {/* IMAGE */}
@@ -846,9 +836,7 @@ const ServicesPage: React.FC = () => {
 
             <h3 className="text-4xl lg:text-6xl font-extrabold mb-10 leading-tight">
               Ready to architect your
-              <span className="block text-white/80">
-                digital future?
-              </span>
+              <span className="block text-white/80">digital future?</span>
             </h3>
 
             <p className="text-blue-100 text-lg mb-14 font-medium opacity-80">
@@ -872,90 +860,8 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </motion.section>
-
-
-
-      <motion.section
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-      className="max-w-7xl mx-auto px-6 pb-48"
-    >
-      <div className="relative group rounded-[4rem] overflow-hidden bg-[#2E1CFF] shadow-3xl shadow-blue-600/20">
-        
-        {/* THE VISUAL LAYER: High-End Background Video or GIF */}
-        {/* Suggestion: Use a "Black Hole/Warp" or "Liquid Silk" video in blue tones */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover opacity-60 mix-blend-overlay scale-110 group-hover:scale-100 transition-transform duration-[3s] ease-out"
-          >
-            <source src="https://vimeo.com/60516236?fl=pl&fe=cm" type="video/mp4" />
-          </video>
-          
-          {/* Subtle Gradient Overlays for Depth */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#2E1CFF] via-transparent to-transparent opacity-80" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#2E1CFF_100%)] opacity-40" />
-        </div>
-
-        {/* THE CONTENT LAYER */}
-        <div className="relative z-10 px-8 py-24 lg:py-32 flex flex-col items-center text-center">
-          
-          {/* Animated Badge */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            className="mb-8 px-6 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-md"
-          >
-            <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-white">
-              Limited Intake 2026
-            </span>
-          </motion.div>
-
-          <h3 className="text-5xl lg:text-8xl font-bold mb-12 leading-[0.9] tracking-tight text-white">
-            Ready to architect <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40">
-              your digital future?
-            </span>
-          </h3>
-
-          <p className="max-w-2xl text-blue-100/80 text-lg lg:text-xl mb-16 font-light leading-relaxed">
-            We don't just build apps; we engineer legacy systems. 
-            Join our exclusive partner list for Q3/Q4.
-          </p>
-
-          {/* BUTTON SYSTEM */}
-          <div className="flex flex-col sm:flex-row gap-8 items-center justify-center">
-            <Magnetic>
-              <button className="relative overflow-hidden group/btn bg-white text-[#2E1CFF] px-16 py-6 rounded-2xl font-black uppercase tracking-[0.2em] text-[11px] transition-all duration-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]">
-                <span className="relative z-10">Schedule a Call</span>
-                {/* Internal slide effect */}
-                <div className="absolute inset-0 bg-slate-100 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300" />
-              </button>
-            </Magnetic>
-
-            <Magnetic>
-              <button className="group/secondary flex items-center gap-4 text-white text-[11px] font-black uppercase tracking-[0.2em]">
-                <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover/secondary:bg-white group-hover/secondary:text-[#2E1CFF] transition-all duration-500">
-                  →
-                </div>
-                View Case Studies
-              </button>
-            </Magnetic>
-          </div>
-        </div>
-
-        {/* DECORATIVE CORNER ELEMENT */}
-        <div className="absolute bottom-[-20px] right-[-20px] w-64 h-64 bg-white/5 rounded-full blur-3xl" />
-      </div>
-    </motion.section>
     </div>
   );
 };
 
 export default ServicesPage;
-
