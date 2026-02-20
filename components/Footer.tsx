@@ -278,6 +278,7 @@ const Footer: React.FC = () => {
                 {
                   name: "LinkedIn",
                   icon: "M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z",
+                  url: "https://in.linkedin.com/company/zenydata-technologies",
                 },
                 {
                   name: "X",
@@ -289,8 +290,9 @@ const Footer: React.FC = () => {
                 },
               ].map((social) => (
                 <a
+                  target="_blank"
                   key={social.name}
-                  href="#"
+                  href={social.url}
                   className="w-12 h-12 rounded-2xl border border-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/5 hover:border-[#2E1CFF] transition-all duration-300"
                 >
                   <span className="sr-only">{social.name}</span>
@@ -416,10 +418,22 @@ const Footer: React.FC = () => {
                   Kolkata, 700071
                 </p>
                 <div className="pt-4 text-[11px] font-black uppercase tracking-widest text-slate-500">
-                  Phone : (+91) 8100151002
+                  Phone :{" "}
+                  <a
+                    href="tel:+918100151002"
+                    className="hover:text-[#2E1CFF] hover:translate-x-1 transition-colors"
+                  >
+                    (+91) 8100151002
+                  </a>
                 </div>
                 <div className="text-[11px] font-black uppercase tracking-widest text-slate-500">
-                  Email : sales@zenydata.com
+                  Email :{" "}
+                  <a
+                    href="mailto:sales@zenydata.com"
+                    className="hover:text-[#2E1CFF] hover:translate-x-1 transition-colors"
+                  >
+                    sales@zenydata.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -439,6 +453,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] font-black uppercase tracking-widest text-slate-500">
             <a
+              // onClick={() => navigate("/privacy-policy")}
               href="/privacy-policy"
               className="hover:text-blue-500 transition-colors"
             >

@@ -16,15 +16,34 @@ export interface Industry {
   icon: string;
 }
 
+// export interface Insight {
+//   id: string;
+//   category: string;
+//   title: string;
+//   content: string;
+//   image: string;
+//   date: string;
+//   author: string;
+//   readTime: string;
+// }
+
+// ✅ NEW (correct)
+export interface InsightSection {
+  heading?: string;
+  paragraphs: string[];
+}
+
 export interface Insight {
   id: string;
   category: string;
   title: string;
-  content: string;
-  image: string;
-  date: string;
   author: string;
+  date: string;
   readTime: string;
+  image: string;
+
+  intro: string;
+  sections: InsightSection[];
 }
 
 export interface CaseStudy {

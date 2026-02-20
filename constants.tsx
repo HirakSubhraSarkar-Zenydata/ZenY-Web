@@ -363,6 +363,57 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
 ];
 
+// export const INSIGHTS: Insight[] = [
+//   {
+//     id: "supply-chain-graph",
+//     category: "DATA WHITE PAPER",
+//     title: "Optimizing Graph Databases for Supply Chain Resilience",
+//     author: "Hirak Sarkar",
+//     date: "Jan 20, 2026",
+//     readTime: "12 min",
+//     image:
+//       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+//     content:
+//       "Supply chains are fundamentally graphs. Traditional relational databases struggle to manage the deeply nested dependencies found in modern global logistics. This paper explores how Neo4j and AWS Neptune can be used to map tier-N supplier risks in real-time...",
+//   },
+//   {
+//     id: "rag-search-enterprise",
+//     category: "AI RESEARCH",
+//     title: "The Role of RAG Architecture in Enterprise Search",
+//     author: "Arka Raha",
+//     date: "Jan 18, 2026",
+//     readTime: "8 min",
+//     image:
+//       "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
+//     content:
+//       "Retrieval-Augmented Generation (RAG) is transforming how employees interact with company knowledge. By grounding LLMs in secure, internal documents, we eliminate hallucinations and provide cited, verifiable answers...",
+//   },
+//   {
+//     id: "cloud-spend-optimization",
+//     category: "CASE STUDY",
+//     title: "Reducing Cloud Spend by 40% for Retail Giants",
+//     author: "Abhratanu Roy",
+//     date: "Jan 15, 2026",
+//     readTime: "10 min",
+//     image:
+//       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+//     content:
+//       "Waste in the cloud is at an all-time high. Our latest research into FinOps methodologies shows that automated rightsizing and spot-instance orchestration can slash OpEx without impacting service reliability...",
+//   },
+//   {
+//     id: "ai-driven-finops",
+//     category: "CASE STUDY",
+//     title: "AI-Driven FinOps Use-Case List for the Data Services Industry",
+//     author: "Varun Mendiratta",
+//     date: "Feb 20, 2026",
+//     readTime: "10 min",
+//     image:
+//       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+//     content:
+//       "AI-enabled FinOps use cases tailored to Data Services organizations that manage large datasets, ETL/ELT pipelines, warehouses, multi-cloud platforms, and BI workloads...",
+//   },
+// ];
+
 export const INSIGHTS: Insight[] = [
   {
     id: "supply-chain-graph",
@@ -373,9 +424,28 @@ export const INSIGHTS: Insight[] = [
     readTime: "12 min",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    content:
+
+    intro:
       "Supply chains are fundamentally graphs. Traditional relational databases struggle to manage the deeply nested dependencies found in modern global logistics. This paper explores how Neo4j and AWS Neptune can be used to map tier-N supplier risks in real-time...",
+
+    sections: [
+      {
+        heading: "I. Supply Chains as Graphs",
+        paragraphs: [
+          "Modern supply chains consist of suppliers, manufacturers, logistics providers, and distributors connected through thousands of dynamic relationships.",
+          "Graph databases model these connections natively, allowing organizations to represent real-world dependencies without costly joins or schema rigidity."
+        ]
+      },
+      {
+        heading: "II. Real-Time Risk Propagation",
+        paragraphs: [
+          "Disruptions at a single tier-N supplier can propagate across the entire network within hours.",
+          "By using graph traversal and event-driven ingestion, enterprises can identify upstream and downstream risks in near real-time."
+        ]
+      }
+    ]
   },
+
   {
     id: "rag-search-enterprise",
     category: "AI RESEARCH",
@@ -385,9 +455,28 @@ export const INSIGHTS: Insight[] = [
     readTime: "8 min",
     image:
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
-    content:
+
+    intro:
       "Retrieval-Augmented Generation (RAG) is transforming how employees interact with company knowledge. By grounding LLMs in secure, internal documents, we eliminate hallucinations and provide cited, verifiable answers...",
+
+    sections: [
+      {
+        heading: "I. Limitations of Traditional Enterprise Search",
+        paragraphs: [
+          "Keyword-based search systems struggle with semantic understanding and context awareness.",
+          "As internal documentation grows, employees spend more time searching for answers than acting on them."
+        ]
+      },
+      {
+        heading: "II. Retrieval-Augmented Generation",
+        paragraphs: [
+          "RAG introduces a deterministic retrieval layer between LLMs and enterprise data sources.",
+          "By grounding responses in verified documents, organizations eliminate hallucinations and improve answer reliability."
+        ]
+      }
+    ]
   },
+
   {
     id: "cloud-spend-optimization",
     category: "CASE STUDY",
@@ -397,9 +486,28 @@ export const INSIGHTS: Insight[] = [
     readTime: "10 min",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-    content:
+
+    intro:
       "Waste in the cloud is at an all-time high. Our latest research into FinOps methodologies shows that automated rightsizing and spot-instance orchestration can slash OpEx without impacting service reliability...",
+
+    sections: [
+      {
+        heading: "I. Identifying Cloud Waste",
+        paragraphs: [
+          "Over-provisioned compute, idle storage, and unused managed services are the primary drivers of cloud inefficiency.",
+          "Lack of visibility across teams prevents organizations from acting on cost anomalies early."
+        ]
+      },
+      {
+        heading: "II. Automated Rightsizing and Optimization",
+        paragraphs: [
+          "By implementing automated rightsizing and workload scheduling, the organization reduced infrastructure costs by 40%.",
+          "Spot-instance orchestration enabled additional savings without impacting application reliability."
+        ]
+      }
+    ]
   },
+
   {
     id: "ai-driven-finops",
     category: "CASE STUDY",
@@ -409,9 +517,27 @@ export const INSIGHTS: Insight[] = [
     readTime: "10 min",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
-    content:
+
+    intro:
       "AI-enabled FinOps use cases tailored to Data Services organizations that manage large datasets, ETL/ELT pipelines, warehouses, multi-cloud platforms, and BI workloads...",
-  },
+
+    sections: [
+      {
+        heading: "I. FinOps Challenges in Data Services",
+        paragraphs: [
+          "ETL pipelines, data warehouses, and BI platforms generate highly variable and unpredictable cloud costs.",
+          "Manual monitoring fails to keep pace with the scale and velocity of modern data workloads."
+        ]
+      },
+      {
+        heading: "II. AI-Enabled FinOps Use Cases",
+        paragraphs: [
+          "Machine learning models can forecast spend anomalies before they occur.",
+          "AI-driven recommendations enable dynamic scaling, workload scheduling, and intelligent resource allocation."
+        ]
+      }
+    ]
+  }
 ];
 
 export const INDUSTRIES: Industry[] = [
