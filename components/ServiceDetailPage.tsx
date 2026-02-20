@@ -385,65 +385,73 @@ const ServiceDetailPage: React.FC = () => {
       {/* ===============================
          HERO
       ================================ */}
-      <section className="max-w-7xl mx-auto px-6 mb-32 relative">
-        <div className="absolute top-0 right-0 -z-10 w-[800px] h-[800px] bg-blue-50/40 rounded-full blur-[120px] opacity-60 animate-pulse"></div>
+      <section className="max-w-7xl mx-auto px-6 pt-0 pb-20 lg:pb-32 relative overflow-hidden">
+  {/* Subtle background blob */}
+  <div className="absolute -top-20 -right-20 lg:-top-40 lg:-right-40 w-[500px] lg:w-[700px] h-[500px] lg:h-[700px] bg-blue-50/30 rounded-full blur-3xl opacity-70 animate-pulse-slow pointer-events-none"></div>
 
-        <div className="flex flex-col lg:flex-row gap-20 items-center">
-          <div className="lg:w-1/2 space-y-10">
-            <div className="inline-flex items-center gap-4">
-              <span className="w-16 h-[1px] bg-[#2E1CFF]" />
-              <span className="text-[#2E1CFF] font-black uppercase tracking-[0.5em] text-[10px]">
-                Strategic Engineering Practice
-              </span>
-            </div>
+  <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
+    {/* Left – Text content */}
+    <div className="lg:w-1/2 space-y-10 lg:space-y-12 text-left lg:text-left w-full">
+      <div className="inline-flex items-center gap-4 justify-start lg:justify-start">
+        <span className="w-16 h-px bg-[#2E1CFF]" />
+        <span className="text-[#2E1CFF] font-black uppercase tracking-[0.5em] text-[10px]">
+          Strategic Engineering Practice
+        </span>
+      </div>
 
-            <h1 className="text-5xl lg:text-7xl font-black text-slate-950 leading-[1] tracking-tight">
-              {service.title.split(" ").map((word, i) => (
-                <span
-                  key={i}
-                  className={
-                    i === service.title.split(" ").length - 1
-                      ? "text-slate-400 block lg:inline"
-                      : "block lg:inline mr-4"
-                  }
-                >
-                  {word}
-                </span>
-              ))}
-            </h1>
+      <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-slate-950 leading-[1.05] tracking-tight text-left">
+        {service.title.split(" ").map((word, i, arr) => (
+          <span
+            key={i}
+            className={
+              i === arr.length - 1
+                ? "text-slate-400 block lg:inline"
+                : "block lg:inline"
+            }
+          >
+            {word}{" "}
+          </span>
+        ))}
+      </h1>
 
-            <p className="text-xl lg:text-2xl text-slate-500 font-medium leading-relaxed max-w-xl">
-              {service.longDescription || service.description}
-            </p>
+      <p className="text-lg md:text-xl lg:text-2xl text-slate-500 font-medium leading-relaxed max-w-2xl text-left mx-0">
+        {service.longDescription || service.description}
+      </p>
 
-            <div className="flex flex-wrap gap-6 pt-6">
-              <button
-                onClick={openCalendlyPopup}
-                className="bg-[#2E1CFF] text-white px-12 py-5 rounded-2xl text-xs font-black uppercase tracking-[0.2em] shadow-3xl shadow-blue-600/30 hover:-translate-y-1 transition-all"
-              >
-                Brief Our Strategy Team
-              </button>
+      <div className="flex flex-wrap gap-5 justify-start lg:justify-start pt-4">
+        <button
+          onClick={openCalendlyPopup}
+          className="bg-[#2E1CFF] text-white px-10 md:px-12 py-5 rounded-2xl text-xs md:text-sm font-black uppercase tracking-[0.2em] shadow-xl shadow-blue-600/25 hover:shadow-2xl hover:shadow-blue-600/40 hover:-translate-y-1 transition-all duration-300"
+        >
+          Brief Our Strategy Team
+        </button>
 
-              {/* <button
-                onClick={() => navigate("/services")}
-                className="bg-white border-2 border-slate-100 text-slate-900 px-12 py-5 rounded-2xl text-xs font-black uppercase tracking-[0.2em]"
-              >
-                Go Back
-              </button> */}
-            </div>
-          </div>
+        {/* Uncomment if you want the back button */}
+        {/*
+        <button
+          onClick={() => navigate("/services")}
+          className="bg-white border-2 border-slate-200 text-slate-900 px-10 md:px-12 py-5 rounded-2xl text-xs md:text-sm font-black uppercase tracking-[0.2em] hover:bg-slate-50 transition-colors"
+        >
+          Go Back
+        </button>
+        */}
+      </div>
+    </div>
 
-          {/* IMAGE + FLOATING STAT */}
-          <div className="lg:w-1/2 relative group animate-in slide-in-from-bottom-8 translate-y-16">
-            <div className="aspect-[6/4] rounded-[4rem] overflow-hidden shadow-4xl shadow-slate-200/50">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110"
-              />
-            </div>
+    {/* Right – Image + floating stat */}
+    <div className="lg:w-1/2 relative">
+      <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-slate-200/40 group">
+        <div className="aspect-[4/3] md:aspect-[5/4] lg:aspect-[6/4]">
+          <img
+            src={service.image}
+            alt={service.title}
+            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale group-hover:grayscale-0"
+          />
+        </div>
+      </div>
 
-            <div className="absolute -bottom-10 -left-10 bg-slate-950 p-10 rounded-[2.5rem] shadow-3xl border border-white/5 hidden lg:block hover:scale-105 transition-transform">
+      {/* Floating stat – visible from md screens and up */}
+      <div className="absolute -bottom-10 -left-10 bg-slate-950 p-10 rounded-[2.5rem] shadow-3xl border border-white/5 hidden lg:block hover:scale-105 transition-transform">
               <div className="flex items-center gap-6">
                 <div className="w-14 h-14 bg-blue-600/20 rounded-2xl flex items-center justify-center">
                   <svg
@@ -467,10 +475,10 @@ const ServiceDetailPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* ===============================
          FEATURES GRID
