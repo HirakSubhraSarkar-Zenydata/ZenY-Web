@@ -124,7 +124,7 @@ const InsightsHub: React.FC = () => {
               </h3>
 
               <p className="text-slate-500 font-medium text-sm leading-relaxed line-clamp-2">
-                {insight.content}
+                {insight.intro}
               </p>
 
               <button
