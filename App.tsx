@@ -222,6 +222,8 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { motion } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -241,7 +243,12 @@ import DataLabPage from "./components/DataLabPage";
 import AssociationsPage from "./components/AssociationsPage";
 import PrivacyPolicyPage from "./components/PrivacyPolicyPage";
 
+
+ 
+
 const DataTicker = () => (
+  
+  
   <section className="bg-slate-950 text-white py-6 overflow-hidden border-y border-slate-800">
     <motion.div
       className="max-w-7xl mx-auto px-6 flex items-center gap-16 whitespace-nowrap"
@@ -298,8 +305,32 @@ const DataTicker = () => (
   </section>
 );
 
-const HomePage = () => (
+const HomePage = () => {
+  const navigate = useNavigate();
+  /* Calendly script */
+  useEffect(() => {
+    const scriptId = "calendly-widget-script";
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.src =
+        "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
+  const openCalendlyPopup = () => {
+    (window as any).Calendly?.initPopupWidget({
+      url: "https://calendly.com/zenydata-sales/30min",
+    });
+  };
+
+  return (
+
+  
   <>
+  
     <Hero />
     <DataTicker />
     <Stats />
@@ -421,7 +452,9 @@ const HomePage = () => (
 
             {/* BUTTON SYSTEM */}
             <div className="flex flex-col sm:flex-row gap-8 items-center justify-center">
-              <button className="relative overflow-hidden group/btn bg-white text-[#2E1CFF] px-16 py-6 rounded-2xl font-black uppercase tracking-[0.2em] text-[11px] transition-all duration-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]">
+              <button 
+              onClick={openCalendlyPopup}
+                className="relative overflow-hidden group/btn bg-white text-[#2E1CFF] px-16 py-6 rounded-2xl font-black uppercase tracking-[0.2em] text-[11px] transition-all duration-500 hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]">
                 <span className="relative z-10">
                   Book your free Consultation
                 </span>
@@ -429,7 +462,9 @@ const HomePage = () => (
                 <div className="absolute inset-0 bg-slate-100 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300" />
               </button>
 
-              <button className="group/secondary flex items-center gap-4 text-white text-[11px] font-black uppercase tracking-[0.2em]">
+              <button 
+              onClick={() => navigate("/insights")}
+                className="group/secondary flex items-center gap-4 text-white text-[11px] font-black uppercase tracking-[0.2em]">
                 <div className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center group-hover/secondary:bg-white group-hover/secondary:text-[#2E1CFF] transition-all duration-500">
                   →
                 </div>
@@ -463,6 +498,7 @@ const HomePage = () => (
     {/* unchanged */}
   </>
 );
+};
 
 function App() {
   return (

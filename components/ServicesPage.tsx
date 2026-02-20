@@ -624,6 +624,8 @@ const fadeSide = (dir: "left" | "right") => ({
   },
 });
 
+
+
 /* ===============================
    MAGNETIC BUTTON
 ================================ */
@@ -637,6 +639,8 @@ const Magnetic: React.FC<{
 
   const springX = useSpring(x, { stiffness: 300, damping: 20 });
   const springY = useSpring(y, { stiffness: 300, damping: 20 });
+
+  
 
   return (
     <motion.div
@@ -670,6 +674,28 @@ const ServicesPage: React.FC = () => {
   const heroRef = useRef(null);
 
   useEffect(() => window.scrollTo(0, 0), []);
+  /* ===============================
+     Load Calendly Once
+  ================================ */
+  useEffect(() => {
+    const scriptId = "calendly-widget-script";
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
+  /* ===============================
+     Calendly Handler
+  ================================ */
+  const openCalendlyPopup = () => {
+    window.Calendly?.initPopupWidget({
+      url: "https://calendly.com/zenydata-sales/30min",
+    });
+  };
 
   /* Scroll-driven hero parallax */
   const { scrollYProgress } = useScroll({
@@ -845,13 +871,19 @@ const ServicesPage: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Magnetic>
-                <div className="bg-white text-[#2E1CFF] px-14 py-5 rounded-2xl font-black uppercase tracking-[0.25em] text-[11px]">
+              <Magnetic
+                onClick={openCalendlyPopup}
+                >
+                <div 
+                   
+                  className="bg-white text-[#2E1CFF] px-14 py-5 rounded-2xl font-black uppercase tracking-[0.25em] text-[11px]">
                   Schedule a Consultation
                 </div>
               </Magnetic>
 
-              <Magnetic>
+              <Magnetic
+              onClick={() => navigate("/insights")}
+                >
                 <div className="border border-white/30 px-14 py-5 rounded-2xl font-black uppercase tracking-[0.25em] text-[11px] text-white hover:bg-white/10 transition-all">
                   View Case Studies
                 </div>

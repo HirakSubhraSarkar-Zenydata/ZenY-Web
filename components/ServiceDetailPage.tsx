@@ -397,7 +397,7 @@ const ServiceDetailPage: React.FC = () => {
               </span>
             </div>
 
-            <h1 className="text-5xl lg:text-8xl font-black text-slate-950 leading-[1] tracking-tight">
+            <h1 className="text-5xl lg:text-7xl font-black text-slate-950 leading-[1] tracking-tight">
               {service.title.split(" ").map((word, i) => (
                 <span
                   key={i}
@@ -424,18 +424,18 @@ const ServiceDetailPage: React.FC = () => {
                 Brief Our Strategy Team
               </button>
 
-              <button
+              {/* <button
                 onClick={() => navigate("/services")}
                 className="bg-white border-2 border-slate-100 text-slate-900 px-12 py-5 rounded-2xl text-xs font-black uppercase tracking-[0.2em]"
               >
-                Practice Framework
-              </button>
+                Go Back
+              </button> */}
             </div>
           </div>
 
           {/* IMAGE + FLOATING STAT */}
-          <div className="lg:w-1/2 relative group">
-            <div className="aspect-[5/4] rounded-[4rem] overflow-hidden shadow-4xl shadow-slate-200/50">
+          <div className="lg:w-1/2 relative group animate-in slide-in-from-bottom-8 translate-y-16">
+            <div className="aspect-[6/4] rounded-[4rem] overflow-hidden shadow-4xl shadow-slate-200/50">
               <img
                 src={service.image}
                 alt={service.title}
@@ -443,10 +443,29 @@ const ServiceDetailPage: React.FC = () => {
               />
             </div>
 
-            <div className="absolute -bottom-10 -left-10 bg-slate-950 p-10 rounded-[2.5rem] shadow-3xl hidden lg:block">
-              <div className="text-blue-400 font-black text-4xl">99.9%</div>
-              <div className="text-white text-[9px] uppercase tracking-[0.3em] opacity-60 mt-2">
-                Enterprise Reliability
+            <div className="absolute -bottom-10 -left-10 bg-slate-950 p-10 rounded-[2.5rem] shadow-3xl border border-white/5 hidden lg:block hover:scale-105 transition-transform">
+              <div className="flex items-center gap-6">
+                <div className="w-14 h-14 bg-blue-600/20 rounded-2xl flex items-center justify-center">
+                  <svg
+                    className="w-7 h-7 text-blue-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12.395 2.553a1 1 0 00-1.4503-.321l-9 6a1 1 0 00.402 1.768h7.459L8.41 17.447a1 1 0 001.453.321l9-6a1 1 0 00-.402-1.768h-7.459l1.393-4.447z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-blue-400 font-black text-4xl leading-none">
+                    99.9%
+                  </div>
+                  <div className="text-white text-[9px] font-bold uppercase tracking-[0.3em] mt-2 opacity-50">
+                    Enterprise Reliability
+                  </div>
+                </div>
               </div>
             </div>
           </div>
