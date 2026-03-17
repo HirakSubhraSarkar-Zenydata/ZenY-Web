@@ -477,7 +477,7 @@ const Hero: React.FC = () => {
 
   const dataFocusContent = [
     {
-      title: "Petabyte-Scale Engineering for Global Leaders",
+      title: "Petabyte-Scale Engineering for Global Enterprises",
       subtitle:
         "Architecting high-performance data ecosystems that transform raw information into predictive intelligence.",
     },

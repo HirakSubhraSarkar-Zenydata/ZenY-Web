@@ -108,11 +108,11 @@ const AboutPage: React.FC = () => {
                 key={idx}
                 className="flex flex-col md:flex-row items-center gap-12 bg-white/5 backdrop-blur-md p-10 lg:p-16 rounded-[4rem] border border-white/10 group hover:border-blue-500/50 transition-all duration-500"
               >
-                <div className="shrink-0 w-48 h-48 lg:w-64 lg:h-64 rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/5 group-hover:border-blue-500/30 transition-all">
+                <div className="shrink-0 w-48 lg:w-64 aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white/5 group-hover:border-blue-500/30 transition-all">
                   <img
                     src={advisor.image}
                     alt={advisor.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-700"
                   />
                 </div>
                 <div className="space-y-6 text-center md:text-left">
@@ -127,11 +127,11 @@ const AboutPage: React.FC = () => {
                   <p className="text-slate-400 text-lg leading-relaxed font-medium italic">
                     "{advisor.bio}"
                   </p>
-                  <div className="pt-4 flex justify-center md:justify-start">
+                  {/* <div className="pt-4 flex justify-center md:justify-start">
                     <button className="text-white font-black uppercase tracking-widest text-[9px] flex items-center gap-3 hover:text-blue-400 transition-colors">
                       Full Executive Profile <span>→</span>
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}

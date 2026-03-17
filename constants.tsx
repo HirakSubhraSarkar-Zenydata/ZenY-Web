@@ -93,7 +93,7 @@ export const LEADERSHIP: LeadershipMember[] = [
     name: "Nityananda Nath",
     role: "Director, Zenydata Technologies",
     image:
-      "https://res.cloudinary.com/djqf7eivl/image/upload/v1771584389/1_diector_vvr4yh.png",
+      "https://res.cloudinary.com/djqf7eivl/image/upload/v1771619204/Final_director_q8igqn.png",
     quote:
       "At ZenyData, we believe in empowering people through data-driven simplicity. Our mission is to bring clarity to complexity. We are committed to transforming raw data into meaningful insights that drive better decisions. Innovation and transparency are at the core of everything we do. By bridging the gap between technology and human understanding, we strive to make data work for everyone — simply, securely, and smartly.",
   },
@@ -104,8 +104,8 @@ export const ADVISORS: Advisor[] = [
     name: "Avishek Mitra",
     role: "Global Advisor",
     image:
-      "https://res.cloudinary.com/djqf7eivl/image/upload/v1771493857/Avi1_o6yeln.png",
-    bio: "A visionary strategist with over two decades of experience in driving digital transformation for Fortune 500 companies. Avishek provides strategic guidance on large scale data transformations, a hands on data leader with consulting experience across multiple industries and specializes understanding in retail, fmcg and .",
+      "https://res.cloudinary.com/djqf7eivl/image/upload/v1771493703/Avi_Sir_zptqhn.png",
+    bio: "A visionary data strategist with over two decades of experience delivering large-scale data initiatives for Fortune 500 companies. Avishek provides strategic leadership across enterprise data platforms, analytics modernization, and AI-driven transformation. A hands-on data leader with deep consulting experience across multiple industries, he specializes in retail, FMCG, and banking, driving measurable business impact through advanced data architecture, engineering, and insights.",
   },
 ];
 
@@ -421,7 +421,7 @@ export const INSIGHTS: Insight[] = [
     title: "Optimizing Graph Databases for Supply Chain Resilience",
     author: "Hirak Sarkar",
     date: "Jan 20, 2026",
-    readTime: "12 min",
+    readTime: "5 min",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
 
@@ -433,17 +433,17 @@ export const INSIGHTS: Insight[] = [
         heading: "I. Supply Chains as Graphs",
         paragraphs: [
           "Modern supply chains consist of suppliers, manufacturers, logistics providers, and distributors connected through thousands of dynamic relationships.",
-          "Graph databases model these connections natively, allowing organizations to represent real-world dependencies without costly joins or schema rigidity."
-        ]
+          "Graph databases model these connections natively, allowing organizations to represent real-world dependencies without costly joins or schema rigidity.",
+        ],
       },
       {
         heading: "II. Real-Time Risk Propagation",
         paragraphs: [
           "Disruptions at a single tier-N supplier can propagate across the entire network within hours.",
-          "By using graph traversal and event-driven ingestion, enterprises can identify upstream and downstream risks in near real-time."
-        ]
-      }
-    ]
+          "By using graph traversal and event-driven ingestion, enterprises can identify upstream and downstream risks in near real-time.",
+        ],
+      },
+    ],
   },
 
   {
@@ -452,9 +452,9 @@ export const INSIGHTS: Insight[] = [
     title: "The Role of RAG Architecture in Enterprise Search",
     author: "Arka Raha",
     date: "Jan 18, 2026",
-    readTime: "8 min",
+    readTime: "5 min",
     image:
-      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
+      "https://res.cloudinary.com/djqf7eivl/image/upload/v1771616601/pexels-tima-miroshnichenko-5453821_iut5ml.jpg",
 
     intro:
       "Retrieval-Augmented Generation (RAG) is transforming how employees interact with company knowledge. By grounding LLMs in secure, internal documents, we eliminate hallucinations and provide cited, verifiable answers...",
@@ -464,17 +464,17 @@ export const INSIGHTS: Insight[] = [
         heading: "I. Limitations of Traditional Enterprise Search",
         paragraphs: [
           "Keyword-based search systems struggle with semantic understanding and context awareness.",
-          "As internal documentation grows, employees spend more time searching for answers than acting on them."
-        ]
+          "As internal documentation grows, employees spend more time searching for answers than acting on them.",
+        ],
       },
       {
         heading: "II. Retrieval-Augmented Generation",
         paragraphs: [
           "RAG introduces a deterministic retrieval layer between LLMs and enterprise data sources.",
-          "By grounding responses in verified documents, organizations eliminate hallucinations and improve answer reliability."
-        ]
-      }
-    ]
+          "By grounding responses in verified documents, organizations eliminate hallucinations and improve answer reliability.",
+        ],
+      },
+    ],
   },
 
   {
@@ -483,7 +483,7 @@ export const INSIGHTS: Insight[] = [
     title: "Reducing Cloud Spend by 40% for Retail Giants",
     author: "Abhratanu Roy",
     date: "Jan 15, 2026",
-    readTime: "10 min",
+    readTime: "5 min",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
 
@@ -495,17 +495,17 @@ export const INSIGHTS: Insight[] = [
         heading: "I. Identifying Cloud Waste",
         paragraphs: [
           "Over-provisioned compute, idle storage, and unused managed services are the primary drivers of cloud inefficiency.",
-          "Lack of visibility across teams prevents organizations from acting on cost anomalies early."
-        ]
+          "Lack of visibility across teams prevents organizations from acting on cost anomalies early.",
+        ],
       },
       {
         heading: "II. Automated Rightsizing and Optimization",
         paragraphs: [
           "By implementing automated rightsizing and workload scheduling, the organization reduced infrastructure costs by 40%.",
-          "Spot-instance orchestration enabled additional savings without impacting application reliability."
-        ]
-      }
-    ]
+          "Spot-instance orchestration enabled additional savings without impacting application reliability.",
+        ],
+      },
+    ],
   },
 
   {
@@ -514,30 +514,511 @@ export const INSIGHTS: Insight[] = [
     title: "AI-Driven FinOps Use-Case List for the Data Services Industry",
     author: "Varun Mendiratta",
     date: "Feb 20, 2026",
-    readTime: "10 min",
+    readTime: "15 min",
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
+      "https://res.cloudinary.com/djqf7eivl/image/upload/v1771616601/pexels-karola-g-4968391_uta5ha.jpg",
 
     intro:
-      "AI-enabled FinOps use cases tailored to Data Services organizations that manage large datasets, ETL/ELT pipelines, warehouses, multi-cloud platforms, and BI workloads...",
+      "This document outlines practical, AI-enabled FinOps use cases tailored to Data Services organizations that manage large datasets, ETL/ELT pipelines, warehouses, multi-cloud platforms, and BI workloads. Each use case highlights what AI does, why it matters, and typical outcomes.",
+    sections: [
+      {
+        heading: "1. Intelligent Cost Forecasting Across ETL/ELT Pipelines",
+        paragraphs: [
+          "What AI Does:",
+          "• Apply ML/GenAI forecasters (e.g., LSTM/regression) to historical ingestion volumes, pipeline runtimes, and storage patterns to predict future cloud costs.",
+          "• Incorporate seasonality (month-end peaks, campaign periods) and business drivers (product launches, regulatory runs).",
+
+          "Why It Matters:",
+          "• Improves budget accuracy and capacity planning for daily/weekly batches and Fabric/Synapse workloads.",
+          "• Reduces last-minute overprovisioning and spend variance versus plan.",
+
+          "Typical Outcomes:",
+          "• Higher forecast accuracy; earlier alerts on expected spikes; improved CFO confidence in budgets.",
+        ],
+      },
+
+      {
+        heading:
+          "2. Automated Rightsizing of Data Warehouses & Compute Clusters",
+        paragraphs: [
+          "What AI Does:",
+          "• Continuously analyze query performance, CPU/memory, and idle patterns to autoscale or pause clusters.",
+          "• Recommend SKU changes and schedule-based downsizing after batch windows.",
+
+          "Why It Matters:",
+          "• Prevents persistent overprovisioning without sacrificing SLAs.",
+          "• Frees engineers from manual capacity tuning.",
+
+          "Typical Outcomes:",
+          "• 20–30% compute cost reduction with maintained performance.",
+        ],
+      },
+
+      {
+        heading:
+          "3. Real-Time Anomaly Detection in Cloud Spend for Data Pipelines",
+        paragraphs: [
+          "What AI Does:",
+          "• Detect sudden cost spikes from pipeline loops, reruns, exploding datasets, or misconfigured autoscale.",
+          "• Trigger notifications and automated rollbacks or job throttling.",
+
+          "Why It Matters:",
+          "• Catches runaway costs within minutes, not weeks.",
+          "• Reduces bill shocks and billing disputes.",
+
+          "Typical Outcomes:",
+          "• Lower variance to budget; fewer incident post-mortems tied to cost.",
+        ],
+      },
+
+      {
+        heading: "4. Storage Tier Optimization for Data Lakes",
+        paragraphs: [
+          "What AI Does:",
+          "• Profile data access frequency and recommend tier changes (hot → cool/archival).",
+          "• Automate lifecycle policies with AI-curated rules.",
+
+          "Why It Matters:",
+          "• Balances performance with cost across parquet/Delta repositories.",
+          "• Reduces long-term storage TCO without impacting critical workloads.",
+
+          "Typical Outcomes:",
+          "• Material storage savings; faster queries on optimized datasets.",
+        ],
+      },
+
+      {
+        heading:
+          "5. Multi-Cloud Cost Aggregation for Distributed Data Platforms",
+        paragraphs: [
+          "What AI Does:",
+          "• Unify cost signals from Azure, AWS, and GCP into a single FinOps model.",
+          "• Provide domain-level views and showback/chargeback models.",
+
+          "Why It Matters:",
+          "• Improves accountability across federated teams.",
+          "• Enables strategic placement decisions.",
+
+          "Typical Outcomes:",
+          "• Transparency; better vendor negotiations; optimized workload placement.",
+        ],
+      },
+
+      {
+        heading: "6. AI-Driven Query Optimization Recommendations",
+        paragraphs: [
+          "What AI Does:",
+          "• Analyze query plans to suggest partitioning, indexing, caching, and materialized views.",
+          "• Quantify expected cost impact per recommendation.",
+
+          "Why It Matters:",
+          "• Reduces compute bursts and lowers analytics cost.",
+          "• Improves performance and user experience.",
+
+          "Typical Outcomes:",
+          "• Lower cost per GB scanned; improved throughput.",
+        ],
+      },
+
+      {
+        heading: "7. Automatic FinOps Governance Guardrails",
+        paragraphs: [
+          "What AI Does:",
+          "• Enforce budget-aware deployment checks and mandatory tagging.",
+          "• Block releases exceeding spend thresholds.",
+
+          "Why It Matters:",
+          "• Prevents cost regressions from reaching production.",
+          "• Institutionalizes financial accountability.",
+
+          "Typical Outcomes:",
+          "• Fewer cost incidents; predictable run-rate spend.",
+        ],
+      },
+
+      {
+        heading: "8. Data Lineage–Driven Cost Attribution",
+        paragraphs: [
+          "What AI Does:",
+          "• Map lineage from ingestion through serving layers.",
+          "• Surface cost per data product refresh or per consumer query.",
+
+          "Why It Matters:",
+          "• Supports Data Mesh operating models.",
+          "• Improves ROI-based prioritization.",
+
+          "Typical Outcomes:",
+          "• Accurate chargeback; clearer business visibility.",
+        ],
+      },
+
+      {
+        heading: "9. Proactive Pipeline Scaling Recommendations",
+        paragraphs: [
+          "What AI Does:",
+          "• Predict compute needs before execution and allocate just-in-time resources.",
+          "• Use spot/preemptible compute where viable.",
+
+          "Why It Matters:",
+          "• Avoids over- and underprovisioning.",
+          "• Improves SLA adherence.",
+
+          "Typical Outcomes:",
+          "• Higher success rates; lower peak spend.",
+        ],
+      },
+
+      {
+        heading: "10. GenAI Assistants for Cost Insights & Explanation",
+        paragraphs: [
+          "What AI Does:",
+          "• Provide natural-language Q&A over cost telemetry.",
+          "• Explain spikes and suggest next-best optimization actions.",
+
+          "Why It Matters:",
+          "• Democratizes FinOps insights across teams.",
+          "• Reduces analysis time from hours to minutes.",
+
+          "Typical Outcomes:",
+          "• Faster decisions; improved stakeholder trust.",
+        ],
+      },
+
+      {
+        heading: "11. AI-Enhanced Chargeback / Showback Models",
+        paragraphs: [
+          "What AI Does:",
+          "• Automate cost allocation per pipeline, dataset, or domain.",
+          "• Normalize cost per TB processed or per query.",
+
+          "Why It Matters:",
+          "• Reduces disputes and subjective allocations.",
+          "• Encourages responsible consumption.",
+
+          "Typical Outcomes:",
+          "• Fair internal billing; improved efficiency behavior.",
+        ],
+      },
+
+      {
+        heading: "12. Holistic FinOps Maturity Acceleration",
+        paragraphs: [
+          "What AI Does:",
+          "• Progress from reactive reporting to predictive optimization.",
+          "• Continuously refine governance policies using telemetry learning.",
+
+          "Why It Matters:",
+          "• Shortens time-to-value from FinOps programs.",
+          "• Positions FinOps as a strategic capability.",
+
+          "Typical Outcomes:",
+          "• Sustained savings; improved agility; stronger budget predictability.",
+        ],
+      },
+
+      {
+        heading: "Summary",
+        paragraphs: [
+          "• AI transforms FinOps from reactive reporting to predictive automated optimization.",
+          "• Key levers: forecasting, anomaly detection, rightsizing, lineage attribution, GenAI insights.",
+          "• Expected impact: 20–30%+ savings on compute/storage with stronger governance.",
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "prompt-engineering-enterprise",
+    category: "AI RESEARCH",
+    title:
+      "How Prompt Engineering Can Power the Next Generation of Enterprise Solutions",
+    author: "Ipsita Sain",
+    date: "Feb 21, 2026",
+    readTime: "12 min",
+    image:
+      "https://res.cloudinary.com/djqf7eivl/image/upload/v1771616601/pexels-bertellifotografia-16027821_hbuywc.jpg",
+
+    intro:
+      "As enterprises accelerate digital transformation, Prompt Engineering is emerging as a foundational capability that transforms AI models into reliable, scalable, and enterprise-ready collaborators.",
 
     sections: [
       {
-        heading: "I. FinOps Challenges in Data Services",
+        heading: "Introduction",
         paragraphs: [
-          "ETL pipelines, data warehouses, and BI platforms generate highly variable and unpredictable cloud costs.",
-          "Manual monitoring fails to keep pace with the scale and velocity of modern data workloads."
-        ]
+          "As enterprises accelerate their digital transformation journeys, the conversation is no longer about whether to adopt Artificial Intelligence (AI), but how to operationalize it in a way that delivers real business value.",
+          "While investments in AI models, cloud platforms, and data infrastructure continue to grow, a critical enabler of enterprise-scale AI success is rapidly emerging at the forefront: Prompt Engineering.",
+          "Prompt Engineering is the discipline of designing and structuring inputs that guide AI models—particularly Large Language Models (LLMs)—to generate accurate, relevant, and context-aware outputs.",
+          "In enterprise environments, where precision, compliance, scalability, and integration are essential, effective prompt design can be the difference between an AI experiment and a production-grade intelligent solution.",
+        ],
       },
+
       {
-        heading: "II. AI-Enabled FinOps Use Cases",
+        heading: "Why Prompt Engineering Matters for Enterprises",
         paragraphs: [
-          "Machine learning models can forecast spend anomalies before they occur.",
-          "AI-driven recommendations enable dynamic scaling, workload scheduling, and intelligent resource allocation."
-        ]
-      }
-    ]
-  }
+          "Traditional software systems operate on explicit rules and structured logic. AI systems, on the other hand, interpret natural language instructions to perform tasks such as data analysis, document processing, automation, or customer interaction.",
+          "Prompt Engineering acts as the bridge between enterprise intent and AI execution.",
+
+          "With well-crafted prompts, organizations can:",
+          "• Translate business requirements into machine-understandable instructions.",
+          "• Standardize AI-driven decision-making across departments.",
+          "• Reduce manual intervention in data-heavy workflows.",
+          "• Improve the quality and consistency of AI-generated insights.",
+          "• Accelerate deployment of AI-powered automation at scale.",
+
+          "In essence, Prompt Engineering transforms AI from a passive tool into an enterprise-ready digital collaborator.",
+        ],
+      },
+
+      {
+        heading: "Enabling AI-Powered Data Platforms",
+        paragraphs: [
+          "Modern enterprises are investing in AI-powered data platforms to unify structured and unstructured data across business units.",
+          "Prompt Engineering enhances these platforms by enabling intelligent querying, automated summarization, and contextual analysis of enterprise data.",
+
+          "For example:",
+          "• Business users can retrieve insights from data warehouses using natural language.",
+          "• AI systems can generate real-time performance reports from integrated datasets.",
+          "• Complex analytics workflows can be executed through conversational interfaces.",
+
+          "This capability democratizes data access while maintaining governance, allowing stakeholders to make faster, more informed decisions without deep technical expertise.",
+        ],
+      },
+
+      {
+        heading: "Driving Data Engineering and Integration at Scale",
+        paragraphs: [
+          "In large organizations, data resides across disparate systems—from legacy databases to modern cloud environments.",
+          "Integrating these data sources often involves repetitive transformation, mapping, and validation tasks.",
+
+          "Prompt-driven AI workflows can:",
+          "• Automate schema mapping between systems.",
+          "• Generate ETL pipeline logic dynamically.",
+          "• Validate data quality using contextual business rules.",
+          "• Summarize integration outcomes for audit and compliance.",
+
+          "By embedding Prompt Engineering into data engineering pipelines, enterprises can significantly reduce development effort while increasing agility in responding to evolving business requirements.",
+        ],
+      },
+
+      {
+        heading: "Transforming Software Development and Automation",
+        paragraphs: [
+          "AI-assisted development is reshaping how enterprise applications are built and maintained.",
+          "Prompt Engineering enables development teams to:",
+
+          "• Generate code snippets aligned with business logic.",
+          "• Create automated documentation for APIs and services.",
+          "• Perform intelligent testing and debugging.",
+          "• Automate routine maintenance tasks.",
+
+          "Similarly, enterprise automation platforms can leverage prompt-driven AI to orchestrate workflows across finance, HR, customer service, and operations—resulting in measurable productivity gains.",
+        ],
+      },
+
+      {
+        heading: "Elevating Data Visualization and Decision Intelligence",
+        paragraphs: [
+          "Data visualization tools are only as powerful as the insights they convey.",
+          "Prompt Engineering introduces a new layer of intelligence by allowing users to interact with dashboards using natural language queries such as:",
+
+          "• “Show quarterly revenue trends by region.”",
+          "• “Identify anomalies in operational performance.”",
+          "• “Compare customer acquisition costs across channels.”",
+
+          "AI models can interpret these prompts to generate dynamic visualizations and narrative summaries, empowering leadership teams with actionable insights in real time.",
+        ],
+      },
+
+      {
+        heading: "From Capability to Competitive Advantage",
+        paragraphs: [
+          "As enterprises continue to adopt AI across mission-critical processes, Prompt Engineering will play a foundational role in ensuring these systems are reliable, scalable, and aligned with organizational goals.",
+
+          "By integrating Prompt Engineering into:",
+          "• AI-powered data platforms.",
+          "• Data and digital integration frameworks.",
+          "• Software development lifecycles.",
+          "• Automation pipelines.",
+          "• Visualization and reporting tools.",
+
+          "Organizations can unlock the full potential of enterprise AI—transforming fragmented digital initiatives into cohesive, intelligent ecosystems.",
+        ],
+      },
+
+      {
+        heading: "Conclusion",
+        paragraphs: [
+          "Prompt Engineering is not just a technical technique; it is a strategic capability that enables enterprises to harness AI with precision and purpose.",
+          "For organizations seeking to lead in a data-driven economy, investing in Prompt Engineering today can pave the way for the next generation of scalable, intelligent enterprise solutions.",
+          "As IT service and consulting providers continue to innovate across AI, data engineering, and digital integration, Prompt Engineering stands poised to become the cornerstone of enterprise transformation in the years ahead.",
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "agentic-ai-mcp-enterprise",
+    category: "AI STRATEGY",
+    title: "The Rise of Agentic AI: Beyond Chatbots to Autonomous Action",
+    author: "Arka Raha",
+    date: "Feb 21, 2026",
+    readTime: "10 min",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop",
+
+    intro:
+      "Generative AI was the beginning. Agentic AI is the transformation. By combining reasoning-driven AI agents with the Model Context Protocol (MCP), enterprises can evolve from passive AI assistance to autonomous, goal-driven execution across mission-critical systems.",
+
+    sections: [
+      {
+        heading: "From Generative AI to Agentic AI",
+        paragraphs: [
+          "For the past two years, enterprise AI initiatives have centered around Generative AI—summarizing documents, drafting emails, and assisting with content creation. While valuable, these capabilities represent only the surface layer of AI transformation.",
+          "The next frontier is Agentic AI.",
+          "At Zenydata, we define Agentic AI as the evolution from AI that advises to AI that acts. Instead of merely generating outputs, Agentic systems reason, plan, and execute tasks autonomously across enterprise systems.",
+          "This shift bridges the gap between AI’s cognitive intelligence and the operational muscle of the enterprise.",
+        ],
+      },
+
+      {
+        heading: "Why Enterprises Need Agents, Not Just Models",
+        paragraphs: [
+          "Traditional Robotic Process Automation (RPA) is deterministic and fragile. It follows fixed scripts and fails when interfaces change or exceptions arise.",
+          "Agentic AI introduces reasoning, memory, and adaptive planning into enterprise automation.",
+
+          "How Agentic AI transforms the enterprise:",
+          "• From Linear to Adaptive Workflows: Agents understand high-level goals (e.g., 'Optimize the Q3 supply chain') and determine dynamic execution paths—even when data is incomplete.",
+          "• Autonomous Exception Handling: Agents diagnose failures, retrieve missing context, and attempt corrective action before escalating to humans.",
+          "• Continuous Optimization: Agents learn from historical outcomes to refine decision-making over time.",
+          "• True Scalability: Agents provide 24/7 cognitive capacity without proportional headcount expansion.",
+        ],
+      },
+
+      {
+        heading: "The Integration Barrier: The Enterprise ‘Integration Tax’",
+        paragraphs: [
+          "Historically, the biggest constraint on Agentic AI adoption has been integration.",
+          "Granting AI systems secure access to ERP, CRM, HRMS, and financial systems typically requires months of custom API development, compliance checks, and data mapping.",
+          "This integration tax slows innovation and limits scalability.",
+        ],
+      },
+
+      {
+        heading: "The Model Context Protocol (MCP) Solution",
+        paragraphs: [
+          "To overcome this barrier, Zenydata pioneers the use of the Model Context Protocol (MCP).",
+          "MCP is an open integration standard that enables AI agents to securely connect to enterprise data systems using a universal, context-aware interface.",
+          "Rather than building custom connectors for each system, MCP provides plug-and-play interoperability across platforms.",
+
+          "What MCP enables:",
+          "• Secure connectivity to SAP, Oracle, Salesforce, SQL databases, and cloud-native services.",
+          "• Context-aware reasoning by supplying structured and unstructured enterprise data in standardized format.",
+          "• Governance-aligned access control through policy-driven permissions.",
+          "• Reduced integration time from months to weeks.",
+        ],
+      },
+
+      {
+        heading: "Case Study: Agentic ERP for Global Operations",
+        paragraphs: [
+          "We recently implemented an Agentic Swarm architecture for a global enterprise ERP ecosystem, leveraging MCP to unify operational silos.",
+
+          "The Challenge:",
+          "The client experienced manual reconciliation issues between procurement systems and financial ledgers.",
+          "A 12% discrepancy in inventory reporting caused delayed shipments and increased logistics costs.",
+
+          "Our Implementation:",
+          "We deployed a multi-agent system with role specialization:",
+
+          "1. Inventory Agent:",
+          "• Monitored real-time stock levels across three global warehouses via MCP.",
+          "• Predicted restocking needs using demand forecasting models.",
+
+          "2. Logistics Agent:",
+          "• Calculated carbon-efficient shipping routes dynamically.",
+          "• Optimized vendor selection based on cost, SLA, and compliance.",
+
+          "3. ERP Integration Agent:",
+          "• Updated ERP records autonomously via MCP Server.",
+          "• Generated purchase orders and tax-compliant invoices.",
+          "• Reconciled discrepancies across finance and operations modules.",
+
+          "The Result:",
+          "• 65% reduction in manual data entry.",
+          "• Zero inventory discrepancies in first 90 days.",
+          "• 40% faster procurement cycle.",
+          "• Measurable improvement in sustainability metrics.",
+        ],
+      },
+
+      {
+        heading: "Architectural Blueprint for Agentic Enterprises",
+        paragraphs: [
+          "To scale Agentic AI responsibly, enterprises must adopt an architectural foundation that balances autonomy with governance.",
+
+          "Core components of an Agentic architecture:",
+          "• Multi-agent orchestration layer.",
+          "• MCP integration gateway.",
+          "• Memory layer for contextual continuity.",
+          "• Policy enforcement engine for compliance.",
+          "• Human-in-the-loop oversight mechanisms.",
+
+          "This architecture ensures that agents operate within defined guardrails while maintaining decision agility.",
+        ],
+      },
+
+      {
+        heading: "Governance, Security, and Risk Management",
+        paragraphs: [
+          "Autonomous AI requires strong governance frameworks.",
+          "MCP-based systems support:",
+          "• Role-based access control (RBAC).",
+          "• Audit trails for every agent action.",
+          "• Encrypted communication between agents and systems.",
+          "• Approval thresholds for high-impact financial decisions.",
+          "• Real-time anomaly detection in agent behavior.",
+
+          "These safeguards ensure enterprise-grade reliability and regulatory compliance.",
+        ],
+      },
+
+      {
+        heading: "The ROI of Agentic AI",
+        paragraphs: [
+          "Agentic AI shifts enterprises from reactive operations to proactive orchestration.",
+          "Typical measurable outcomes include:",
+          "• 30–50% reduction in operational overhead.",
+          "• Faster decision cycles across finance and supply chain.",
+          "• Improved data accuracy and reduced reconciliation effort.",
+          "• Enhanced cross-departmental coordination.",
+          "• Sustainable cost optimization through intelligent routing and forecasting.",
+
+          "Beyond efficiency, Agentic AI builds institutional intelligence that compounds over time.",
+        ],
+      },
+
+      {
+        heading: "From System of Record to System of Action",
+        paragraphs: [
+          "Traditional enterprises are built as Systems of Record—repositories of historical data.",
+          "Agentic enterprises evolve into Systems of Action—dynamic ecosystems where AI agents interpret data and execute business logic in real time.",
+          "The objective is not workforce replacement, but workforce augmentation.",
+          "By embedding MCP-driven agents into core operations, organizations transform siloed platforms into a unified, intelligent organism.",
+        ],
+      },
+
+      {
+        heading: "Conclusion",
+        paragraphs: [
+          "Agentic AI represents the natural evolution of enterprise intelligence.",
+          "While Generative AI improved productivity, Agentic AI unlocks autonomous execution.",
+          "With the Model Context Protocol as the integration backbone, enterprises can scale secure, compliant, and adaptive AI systems across global operations.",
+          "The future enterprise will not simply store information—it will act on it autonomously.",
+          "The transition begins now.",
+        ],
+      },
+    ],
+  },
 ];
 
 export const INDUSTRIES: Industry[] = [
